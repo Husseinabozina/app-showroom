@@ -104,12 +104,8 @@
         "kind": "proof"
       }
     ],
-    "evidence": [
-      "https://github.com/Husseinabozina/fashion_e_commerce"
-    ],
-    "aliases": [
-      "fashion_e_commerce"
-    ],
+    "evidence": ["https://github.com/Husseinabozina/fashion_e_commerce"],
+    "aliases": ["fashion_e_commerce"],
     "verifiedAt": "2026-10-06"
   },
   {
@@ -218,12 +214,8 @@
         "kind": "proof"
       }
     ],
-    "evidence": [
-      "https://github.com/Husseinabozina/Brees-Mobile-App"
-    ],
-    "aliases": [
-      "Brees-Mobile-App"
-    ],
+    "evidence": ["https://github.com/Husseinabozina/Brees-Mobile-App"],
+    "aliases": ["Brees-Mobile-App"],
     "verifiedAt": "2026-10-06"
   },
   {
@@ -327,9 +319,7 @@
       "https://husseinabozina.github.io/overdeal-view/",
       "https://play.google.com/store/apps/details?id=com.app.overdeal"
     ],
-    "aliases": [
-      "overdeal-view"
-    ],
+    "aliases": ["overdeal-view"],
     "verifiedAt": "2026-10-06"
   },
   {
@@ -428,12 +418,8 @@
         "kind": "proof"
       }
     ],
-    "evidence": [
-      "https://github.com/Husseinabozina/medical_app"
-    ],
-    "aliases": [
-      "medical_app"
-    ],
+    "evidence": ["https://github.com/Husseinabozina/medical_app"],
+    "aliases": ["medical_app"],
     "verifiedAt": "2026-10-06"
   },
   {
@@ -464,10 +450,7 @@
         "Choose the occasion",
         "Wedding, graduation, birthday and newborn categories."
       ],
-      [
-        "Find a design",
-        "Browse templates and review the invitation preview."
-      ],
+      ["Find a design", "Browse templates and review the invitation preview."],
       [
         "Make it personal",
         "Choose a package and continue to the event details."
@@ -528,14 +511,8 @@
         "kind": "presentation"
       }
     ],
-    "evidence": [
-      "https://github.com/Husseinabozina/madow-view"
-    ],
-    "aliases": [
-      "madow",
-      "madow-view",
-      "madwo_assets"
-    ],
+    "evidence": ["https://github.com/Husseinabozina/madow-view"],
+    "aliases": ["madow", "madow-view", "madwo_assets"],
     "verifiedAt": "2026-10-06"
   },
   {
@@ -560,10 +537,7 @@
       "Provided a public Android APK and app screenshots for hands-on review."
     ],
     "flows": [
-      [
-        "Read",
-        "Quran reading and tafsir within the app."
-      ],
+      ["Read", "Quran reading and tafsir within the app."],
       [
         "Stay on time",
         "Location-based prayer times, calculation methods and prayer notification controls."
@@ -633,14 +607,8 @@
         "kind": "proof"
       }
     ],
-    "evidence": [
-      "https://github.com/Husseinabozina/muslim-app-showcase"
-    ],
-    "aliases": [
-      "muslim",
-      "muslim_view",
-      "muslim-app-showcase"
-    ],
+    "evidence": ["https://github.com/Husseinabozina/muslim-app-showcase"],
+    "aliases": ["muslim", "muslim_view", "muslim-app-showcase"],
     "verifiedAt": "2026-10-06"
   },
   {
@@ -667,10 +635,7 @@
       "Recorded realtime contracts separately from completed implementation."
     ],
     "flows": [
-      [
-        "Identity",
-        "Backend authentication, user profiles and discovery."
-      ],
+      ["Identity", "Backend authentication, user profiles and discovery."],
       [
         "Durable messages",
         "Direct conversations, text persistence, read pointers, editing and soft deletion."
@@ -712,9 +677,7 @@
       "https://github.com/Husseinabozina/chat_app",
       "https://github.com/Husseinabozina/chat_app/blob/master/docs/project/CURRENT_STATE.md"
     ],
-    "aliases": [
-      "chat_app"
-    ],
+    "aliases": ["chat_app"],
     "verifiedAt": "2026-10-06"
   },
   {
@@ -723,10 +686,7 @@
     "visible": false,
     "featured": false,
     "order": 107,
-    "aliases": [
-      "lamsa_latifa",
-      "lamsa-latifa-view"
-    ],
+    "aliases": ["lamsa_latifa", "lamsa-latifa-view"],
     "pending": "Store links and artwork found. Confirm personal responsibility and client/company context before publishing a case study."
   },
   {
@@ -735,10 +695,7 @@
     "visible": false,
     "featured": false,
     "order": 108,
-    "aliases": [
-      "talabiat",
-      "jabhamaeak-app"
-    ],
+    "aliases": ["talabiat", "jabhamaeak-app"],
     "pending": "Shared Android package establishes an alias relationship. Confirm naming, personal contribution and release responsibility."
   },
   {
@@ -747,9 +704,7 @@
     "visible": false,
     "featured": false,
     "order": 109,
-    "aliases": [
-      "kesaa"
-    ],
+    "aliases": ["kesaa"],
     "pending": "Needs approved product facts, screenshots, role and shareable links."
   },
   {
@@ -758,10 +713,7 @@
     "visible": false,
     "featured": false,
     "order": 110,
-    "aliases": [
-      "beauty-more",
-      "beaty_and_more"
-    ],
+    "aliases": ["beauty-more", "beaty_and_more"],
     "pending": "Confirm canonical repository, role and approved media."
   },
   {
@@ -770,9 +722,7 @@
     "visible": false,
     "featured": false,
     "order": 111,
-    "aliases": [
-      "rawnq"
-    ],
+    "aliases": ["rawnq"],
     "pending": "Needs product facts, role, public proof and screenshots."
   },
   {
@@ -781,11 +731,7 @@
     "visible": false,
     "featured": false,
     "order": 112,
-    "aliases": [
-      "themar",
-      "themar_app",
-      "themar_app2"
-    ],
+    "aliases": ["themar", "themar_app", "themar_app2"],
     "pending": "Confirm canonical project and duplicate repository relationship."
   },
   {
@@ -794,10 +740,7 @@
     "visible": false,
     "featured": false,
     "order": 113,
-    "aliases": [
-      "nibbles-E-commerce",
-      "nibbles_e_commerce"
-    ],
+    "aliases": ["nibbles-E-commerce", "nibbles_e_commerce"],
     "pending": "Confirm canonical project, role, current media and status."
   }
 ]
