@@ -1,0 +1,803 @@
+[
+  {
+    "slug": "nova",
+    "name": "NOVA",
+    "category": "Commerce",
+    "order": 1,
+    "featured": true,
+    "visible": true,
+    "status": "Engineering showcase",
+    "source": "Public source",
+    "engagement": "Independent project",
+    "color": "#e2e8cf",
+    "ink": "#19251f",
+    "headline": "Shopping, with a point of view.",
+    "summary": "An editorial fashion app that connects discovery, product selection, saved pieces and a complete demo checkout.",
+    "teaser": "A connected shopping experience. With a style of its own.",
+    "role": "Flutter product implementation",
+    "roleDetail": "Mobile implementation, connected shopping flows, bilingual interfaces and an inspectable engineering architecture.",
+    "contributions": [
+      "Built browsing, product variants, wishlist, bag and demo checkout flows.",
+      "Implemented English and Arabic experiences, including right-to-left layouts.",
+      "Connected guest and account sessions through Firebase adapters.",
+      "Implemented the Fold identity across native icons, splash and Flutter launch motion."
+    ],
+    "flows": [
+      [
+        "Discover",
+        "Editorial home, categories, search, product details, sizes and colors."
+      ],
+      [
+        "Make it yours",
+        "Save pieces, build a bag, update quantities and apply promotions."
+      ],
+      [
+        "Complete the journey",
+        "Address, delivery, sandbox payment, review and a demo order receipt."
+      ]
+    ],
+    "engineering": [
+      [
+        "Account boundaries",
+        "Account-scoped state and adapter tests guard against retaining another account’s bag or late results."
+      ],
+      [
+        "Reliable demo checkout",
+        "Idempotent order saving and explicit sandbox payment verification separate a browser return from payment success."
+      ],
+      [
+        "Inspectable delivery",
+        "Feature-first Clean Architecture, repository adapters, Flutter tests and Firebase emulator checks are documented in the public project."
+      ]
+    ],
+    "boundary": "A portfolio demo with sample catalog content and sandbox payments. No real purchases. Product photography and third-party marks are illustrative; no affiliation is implied.",
+    "screens": [
+      {
+        "src": "assets/nova/home.webp",
+        "alt": "Discover the drop — nova",
+        "caption": "Discover the drop"
+      },
+      {
+        "src": "assets/nova/discover.webp",
+        "alt": "Explore collections — nova",
+        "caption": "Explore collections"
+      },
+      {
+        "src": "assets/nova/bag.webp",
+        "alt": "Review the bag — nova",
+        "caption": "Review the bag"
+      },
+      {
+        "src": "assets/nova/confirmation.webp",
+        "alt": "Demo order confirmation — nova",
+        "caption": "Demo order confirmation"
+      },
+      {
+        "src": "assets/nova/account.webp",
+        "alt": "Guest and account options — nova",
+        "caption": "Guest and account options"
+      }
+    ],
+    "video": {
+      "src": "https://raw.githubusercontent.com/Husseinabozina/fashion_e_commerce/HEAD/site/assets/video/nova-walkthrough.mp4",
+      "caption": "A 50-second walkthrough recorded in the actual Flutter app. The public cut excludes address entry."
+    },
+    "links": [
+      {
+        "label": "Download Android",
+        "url": "https://github.com/Husseinabozina/fashion_e_commerce/releases/download/nova-identity-android-v1.0.1/NOVA-1.0.1-Android.apk",
+        "kind": "apk"
+      },
+      {
+        "label": "App source",
+        "url": "https://github.com/Husseinabozina/fashion_e_commerce",
+        "kind": "source"
+      },
+      {
+        "label": "Project presentation",
+        "url": "https://husseinabozina.github.io/fashion_e_commerce/",
+        "kind": "proof"
+      },
+      {
+        "label": "Architecture notes",
+        "url": "https://github.com/Husseinabozina/fashion_e_commerce/blob/master/docs/architecture/clean_architecture.md",
+        "kind": "proof"
+      }
+    ],
+    "evidence": [
+      "https://github.com/Husseinabozina/fashion_e_commerce"
+    ],
+    "aliases": [
+      "fashion_e_commerce"
+    ],
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "slug": "brees",
+    "name": "Brees",
+    "category": "Finance",
+    "order": 2,
+    "featured": true,
+    "visible": true,
+    "status": "Engineering showcase",
+    "source": "Public source",
+    "engagement": "Independent project",
+    "color": "#dcd7f6",
+    "ink": "#24203d",
+    "headline": "A clearer view of everyday money.",
+    "summary": "A navigable personal-finance experience connecting onboarding, accounts, transactions, budgets and financial insights.",
+    "teaser": "From the first account to the bigger financial picture.",
+    "role": "Flutter implementation & engineering",
+    "roleDetail": "Figma analysis, UI reconstruction, navigation, interaction, animation, architecture, data mapping, automated testing, visual QA and CI.",
+    "contributions": [
+      "Translated the Brees Figma Community product flow into Flutter.",
+      "Connected authentication, dashboard, transactions, budgets and insight journeys.",
+      "Separated presentation, use cases, repository contracts, data sources and transport.",
+      "Added automated visual QA, release builds and portfolio delivery."
+    ],
+    "flows": [
+      [
+        "Get started",
+        "Launch motion, onboarding, account setup, sign-up and recovery states."
+      ],
+      [
+        "Understand the money",
+        "Balances, account detail, recent activity and transaction filtering."
+      ],
+      [
+        "Plan ahead",
+        "Budget setup, active budget states and a multi-screen insight story."
+      ]
+    ],
+    "engineering": [
+      [
+        "Visual consistency",
+        "A documented 60-state harness captures Flutter runtime output and compares it with stored design references."
+      ],
+      [
+        "Replaceable infrastructure",
+        "Feature and domain boundaries keep the interface independent of transport and data-source choices."
+      ],
+      [
+        "Release discipline",
+        "The project workflow runs analysis, automated tests, visual QA and a release APK build."
+      ]
+    ],
+    "boundary": "An independent engineering showcase based on the Brees Figma Community UI kit. The original product design is credited to that kit. This is a demo, not a live banking service.",
+    "screens": [
+      {
+        "src": "assets/brees/home_dashboard.webp",
+        "alt": "Finance dashboard — brees",
+        "caption": "Finance dashboard"
+      },
+      {
+        "src": "assets/brees/budgets.webp",
+        "alt": "Active budgets — brees",
+        "caption": "Active budgets"
+      },
+      {
+        "src": "assets/brees/insights.webp",
+        "alt": "Financial insights — brees",
+        "caption": "Financial insights"
+      },
+      {
+        "src": "assets/brees/account_details.webp",
+        "alt": "Account detail — brees",
+        "caption": "Account detail"
+      },
+      {
+        "src": "assets/brees/onboarding.webp",
+        "alt": "Guided onboarding — brees",
+        "caption": "Guided onboarding"
+      },
+      {
+        "src": "assets/brees/sign_up.webp",
+        "alt": "Create an account — brees",
+        "caption": "Create an account"
+      }
+    ],
+    "links": [
+      {
+        "label": "Download Android",
+        "url": "https://husseinabozina.github.io/Brees-Mobile-App/downloads/brees-demo.apk",
+        "kind": "apk"
+      },
+      {
+        "label": "App source",
+        "url": "https://github.com/Husseinabozina/Brees-Mobile-App",
+        "kind": "source"
+      },
+      {
+        "label": "Project presentation",
+        "url": "https://husseinabozina.github.io/Brees-Mobile-App/",
+        "kind": "proof"
+      },
+      {
+        "label": "Architecture notes",
+        "url": "https://github.com/Husseinabozina/Brees-Mobile-App/blob/main/docs/ARCHITECTURE.md",
+        "kind": "proof"
+      }
+    ],
+    "evidence": [
+      "https://github.com/Husseinabozina/Brees-Mobile-App"
+    ],
+    "aliases": [
+      "Brees-Mobile-App"
+    ],
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "slug": "overdeal",
+    "name": "OverDeal",
+    "category": "Business",
+    "order": 3,
+    "featured": true,
+    "visible": true,
+    "status": "Published",
+    "source": "Private source",
+    "engagement": "Client work",
+    "color": "#d8e5f6",
+    "ink": "#182a45",
+    "headline": "Ideas meet opportunity.",
+    "summary": "A mobile platform for presenting ideas and projects, connecting project owners with people interested in new opportunities.",
+    "teaser": "An original Flutter delivery, now a published product.",
+    "role": "Original Flutter app delivery",
+    "roleDetail": "Developed the original mobile version: interfaces, user journeys, REST API integration, state and data handling, bilingual support and maintainable structure.",
+    "contributions": [
+      "Implemented the original mobile UI and connected user journeys.",
+      "Integrated REST APIs and managed application data and state.",
+      "Supported Arabic, English and right-to-left layouts.",
+      "Delivered an organized Flutter foundation for continued development."
+    ],
+    "flows": [
+      [
+        "Explore opportunities",
+        "Browse ideas and projects with structured details."
+      ],
+      [
+        "Present an idea",
+        "Enter project information through a guided submission flow."
+      ],
+      [
+        "Manage requests",
+        "Review incoming and outgoing requests and manage the account."
+      ]
+    ],
+    "engineering": [
+      [
+        "API-driven flows",
+        "The original delivery connected Flutter screens to REST APIs with application state and data handling."
+      ],
+      [
+        "Bilingual experience",
+        "Arabic and English support included right-to-left layouts."
+      ],
+      [
+        "Clear handover boundary",
+        "Another team made later updates for the product owner after the original version was delivered."
+      ]
+    ],
+    "boundary": "The app belongs to its owner. My contribution covers the original mobile version; later changes by another team are not attributed to me. Store images show the published listing and may include those later changes.",
+    "screens": [
+      {
+        "src": "assets/overdeal/store-1.webp",
+        "alt": "Published store artwork 1 — overdeal",
+        "caption": "Published store artwork 1"
+      },
+      {
+        "src": "assets/overdeal/store-2.webp",
+        "alt": "Published store artwork 2 — overdeal",
+        "caption": "Published store artwork 2"
+      },
+      {
+        "src": "assets/overdeal/store-3.webp",
+        "alt": "Published store artwork 3 — overdeal",
+        "caption": "Published store artwork 3"
+      },
+      {
+        "src": "assets/overdeal/store-4.webp",
+        "alt": "Published store artwork 4 — overdeal",
+        "caption": "Published store artwork 4"
+      },
+      {
+        "src": "assets/overdeal/store-5.webp",
+        "alt": "Published store artwork 5 — overdeal",
+        "caption": "Published store artwork 5"
+      }
+    ],
+    "mediaKind": "Store artwork",
+    "links": [
+      {
+        "label": "Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.app.overdeal",
+        "kind": "store"
+      },
+      {
+        "label": "Project presentation",
+        "url": "https://husseinabozina.github.io/overdeal-view/",
+        "kind": "proof"
+      },
+      {
+        "label": "Presentation repository",
+        "url": "https://github.com/Husseinabozina/overdeal-view",
+        "kind": "presentation"
+      }
+    ],
+    "evidence": [
+      "https://husseinabozina.github.io/overdeal-view/",
+      "https://play.google.com/store/apps/details?id=com.app.overdeal"
+    ],
+    "aliases": [
+      "overdeal-view"
+    ],
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "slug": "healthtrack",
+    "name": "HealthTrack",
+    "category": "Healthcare",
+    "order": 4,
+    "featured": true,
+    "visible": true,
+    "status": "Engineering showcase",
+    "source": "Public source",
+    "engagement": "Independent project",
+    "color": "#d6eeee",
+    "ink": "#14383b",
+    "headline": "Care, connected across the journey.",
+    "summary": "A Flutter healthcare showcase connecting specialty discovery, doctor appointments, scheduling and medical records.",
+    "teaser": "One connected care journey. A carefully separated data layer.",
+    "role": "Flutter implementation & engineering",
+    "roleDetail": "Translated a Figma Community healthcare UI system into reusable Flutter screens, connected product journeys and a replaceable repository/data-source boundary.",
+    "contributions": [
+      "Mapped the source UI system into a tested catalog of Flutter routes.",
+      "Connected doctor discovery, scheduling, appointment management and medical records.",
+      "Implemented session changes through a deterministic local data adapter.",
+      "Added navigation regression tests, data-layer tests and automated quality checks."
+    ],
+    "flows": [
+      [
+        "Find care",
+        "Explore specialties, doctor lists, profiles and favorites."
+      ],
+      [
+        "Book an appointment",
+        "Choose a date and time, review payment screens and appointment details."
+      ],
+      [
+        "Keep track",
+        "Manage appointment states and add records within the demo session."
+      ]
+    ],
+    "engineering": [
+      [
+        "UI and data separation",
+        "Screens use HealthRepository and HealthDataSource boundaries; the current adapter uses local session data with simulated latency."
+      ],
+      [
+        "Navigation resilience",
+        "Regression coverage includes Favorites → Back → Home when there is no Navigator pop history."
+      ],
+      [
+        "Reusable product structure",
+        "Shared widgets support repeated specialty layouts while a route catalog test preserves the intended screen coverage."
+      ]
+    ],
+    "boundary": "Engineering showcase using local session data. It is not a live healthcare service or a production medical backend. The original Figma Community UI kit is the design reference, not my original visual design.",
+    "screens": [
+      {
+        "src": "assets/healthtrack/02-specialties.webp",
+        "alt": "Explore specialties — healthtrack",
+        "caption": "Explore specialties"
+      },
+      {
+        "src": "assets/healthtrack/05-schedule.webp",
+        "alt": "Choose a date and time — healthtrack",
+        "caption": "Choose a date and time"
+      },
+      {
+        "src": "assets/healthtrack/07-medical-record.webp",
+        "alt": "Medical records — healthtrack",
+        "caption": "Medical records"
+      },
+      {
+        "src": "assets/healthtrack/06-appointment-details.webp",
+        "alt": "Appointment details — healthtrack",
+        "caption": "Appointment details"
+      },
+      {
+        "src": "assets/healthtrack/08-payment-summary.webp",
+        "alt": "Demo payment summary — healthtrack",
+        "caption": "Demo payment summary"
+      }
+    ],
+    "links": [
+      {
+        "label": "Download Android",
+        "url": "https://github.com/Husseinabozina/medical_app/releases/download/showcase-latest/healthtrack-demo.apk",
+        "kind": "apk"
+      },
+      {
+        "label": "App source",
+        "url": "https://github.com/Husseinabozina/medical_app",
+        "kind": "source"
+      },
+      {
+        "label": "Project presentation",
+        "url": "https://husseinabozina.github.io/medical_app/",
+        "kind": "proof"
+      }
+    ],
+    "evidence": [
+      "https://github.com/Husseinabozina/medical_app"
+    ],
+    "aliases": [
+      "medical_app"
+    ],
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "slug": "madow",
+    "name": "Madow",
+    "category": "Lifestyle",
+    "order": 5,
+    "featured": false,
+    "visible": true,
+    "status": "Product demo",
+    "source": "Private source",
+    "engagement": "Project showcase",
+    "color": "#e9dfd9",
+    "ink": "#4b3830",
+    "headline": "An invitation to every occasion.",
+    "summary": "An Arabic-first invitation experience for choosing an occasion, exploring designs, selecting a package and entering event details.",
+    "teaser": "An Arabic-first invitation journey.",
+    "role": "Mobile interface & invitation flow",
+    "roleDetail": "Shaped the multi-step invitation experience, Arabic-first interface, invitation examples and dedicated product screens.",
+    "contributions": [
+      "Built the guided occasion, package and template selection journey.",
+      "Created Arabic RTL layouts and typography.",
+      "Organized wedding, graduation, birthday and newborn invitation examples.",
+      "Added home, template gallery, preview, package and order-history screens."
+    ],
+    "flows": [
+      [
+        "Choose the occasion",
+        "Wedding, graduation, birthday and newborn categories."
+      ],
+      [
+        "Find a design",
+        "Browse templates and review the invitation preview."
+      ],
+      [
+        "Make it personal",
+        "Choose a package and continue to the event details."
+      ]
+    ],
+    "engineering": [
+      [
+        "Arabic at the center",
+        "Layout, navigation and typography support the right-to-left product experience."
+      ],
+      [
+        "Guided decisions",
+        "The flow separates occasion, design and package choices into focused steps."
+      ]
+    ],
+    "boundary": "A presentation/demo project. The public repository contains presentation material, not Flutter source. Online services, payment processing and backend behavior are not represented as production features. No shareable APK is currently linked.",
+    "screens": [
+      {
+        "src": "assets/madow/home.webp",
+        "alt": "Invitation home — madow",
+        "caption": "Invitation home"
+      },
+      {
+        "src": "assets/madow/occasion-selection.webp",
+        "alt": "Choose an occasion — madow",
+        "caption": "Choose an occasion"
+      },
+      {
+        "src": "assets/madow/templates-gallery.webp",
+        "alt": "Browse invitation designs — madow",
+        "caption": "Browse invitation designs"
+      },
+      {
+        "src": "assets/madow/template-selection.webp",
+        "alt": "Preview a design — madow",
+        "caption": "Preview a design"
+      },
+      {
+        "src": "assets/madow/package-selection.webp",
+        "alt": "Choose a package — madow",
+        "caption": "Choose a package"
+      },
+      {
+        "src": "assets/madow/orders-history.webp",
+        "alt": "Order history — madow",
+        "caption": "Order history"
+      }
+    ],
+    "links": [
+      {
+        "label": "Project presentation",
+        "url": "https://husseinabozina.github.io/madow-view/",
+        "kind": "proof"
+      },
+      {
+        "label": "Presentation repository",
+        "url": "https://github.com/Husseinabozina/madow-view",
+        "kind": "presentation"
+      }
+    ],
+    "evidence": [
+      "https://github.com/Husseinabozina/madow-view"
+    ],
+    "aliases": [
+      "madow",
+      "madow-view",
+      "madwo_assets"
+    ],
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "slug": "qurani",
+    "name": "Qurani",
+    "category": "Daily life",
+    "order": 6,
+    "featured": false,
+    "visible": true,
+    "status": "APK available",
+    "source": "Private source",
+    "engagement": "Project showcase",
+    "color": "#dce9df",
+    "ink": "#204735",
+    "headline": "A quiet space for daily practice.",
+    "summary": "A Flutter Islamic app bringing together prayer times, Quran and tafsir, adhkar, Qibla direction and Hijri dates.",
+    "teaser": "Quran, prayer times and daily remembrance.",
+    "role": "Flutter app development",
+    "roleDetail": "The public project presentation identifies Hussein Abozina as the developer. Application source is maintained privately.",
+    "contributions": [
+      "Developed the Flutter app presented through the public Qurani showcase.",
+      "Provided a public Android APK and app screenshots for hands-on review."
+    ],
+    "flows": [
+      [
+        "Read",
+        "Quran reading and tafsir within the app."
+      ],
+      [
+        "Stay on time",
+        "Location-based prayer times, calculation methods and prayer notification controls."
+      ],
+      [
+        "Return every day",
+        "Morning and evening adhkar, Forty Nawawi, Qibla direction and Hijri dates."
+      ]
+    ],
+    "engineering": [
+      [
+        "Device-centered features",
+        "The documented product combines location-based prayer calculations, notifications and a Qibla compass."
+      ],
+      [
+        "Reviewable build",
+        "An Android release and real app screenshots provide public product evidence while the source remains private."
+      ]
+    ],
+    "boundary": "A public Android APK is available through the presentation repository. No app-store publication is claimed. More detailed architecture and ownership breakdown are not documented in the public source.",
+    "screens": [
+      {
+        "src": "assets/qurani/screenshot_1.webp",
+        "alt": "App screen 1 — qurani",
+        "caption": "App screen 1"
+      },
+      {
+        "src": "assets/qurani/screenshot_2.webp",
+        "alt": "App screen 2 — qurani",
+        "caption": "App screen 2"
+      },
+      {
+        "src": "assets/qurani/screenshot_3.webp",
+        "alt": "App screen 3 — qurani",
+        "caption": "App screen 3"
+      },
+      {
+        "src": "assets/qurani/screenshot_4.webp",
+        "alt": "App screen 4 — qurani",
+        "caption": "App screen 4"
+      },
+      {
+        "src": "assets/qurani/screenshot_5.webp",
+        "alt": "App screen 5 — qurani",
+        "caption": "App screen 5"
+      },
+      {
+        "src": "assets/qurani/screenshot_6.webp",
+        "alt": "App screen 6 — qurani",
+        "caption": "App screen 6"
+      }
+    ],
+    "links": [
+      {
+        "label": "Download Android",
+        "url": "https://github.com/Husseinabozina/muslim-app-showcase/releases/download/v1.0.0/qurani.apk",
+        "kind": "apk"
+      },
+      {
+        "label": "Presentation repository",
+        "url": "https://github.com/Husseinabozina/muslim-app-showcase",
+        "kind": "presentation"
+      },
+      {
+        "label": "Project presentation",
+        "url": "https://husseinabozina.github.io/muslim_view/",
+        "kind": "proof"
+      }
+    ],
+    "evidence": [
+      "https://github.com/Husseinabozina/muslim-app-showcase"
+    ],
+    "aliases": [
+      "muslim",
+      "muslim_view",
+      "muslim-app-showcase"
+    ],
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "slug": "messaging",
+    "name": "Messaging platform",
+    "category": "Communication",
+    "order": 7,
+    "featured": false,
+    "visible": true,
+    "status": "In development",
+    "source": "Public source",
+    "engagement": "Engineering showcase",
+    "color": "#e3e5e9",
+    "ink": "#2b3448",
+    "headline": "Engineering the foundations of conversation.",
+    "summary": "An evolving messaging project with a Flutter client, a NestJS backend and PostgreSQL. The public repository records completed checkpoints and the remaining integration work.",
+    "teaser": "Flutter meets a documented messaging backend.",
+    "role": "Public engineering project",
+    "roleDetail": "The repository documents Flutter modernization, backend foundations, API contracts, architecture decisions and CI. The product is still under development.",
+    "contributions": [
+      "Organized the Flutter client into feature-first auth and chat layers.",
+      "Documented and implemented backend auth, users, direct conversations and durable text messages.",
+      "Added read pointers, sender-owned edit/delete behavior and backend E2E verification.",
+      "Recorded realtime contracts separately from completed implementation."
+    ],
+    "flows": [
+      [
+        "Identity",
+        "Backend authentication, user profiles and discovery."
+      ],
+      [
+        "Durable messages",
+        "Direct conversations, text persistence, read pointers, editing and soft deletion."
+      ],
+      [
+        "Mobile transition",
+        "The current Flutter app still runs its legacy Firebase chat behavior."
+      ]
+    ],
+    "engineering": [
+      [
+        "Durable state first",
+        "The documented backend uses PostgreSQL, explicit migrations and REST-based durable message behavior."
+      ],
+      [
+        "Safe retries and authorization",
+        "Sender/client-message idempotency, conversation membership checks and reply isolation are documented."
+      ],
+      [
+        "An honest integration boundary",
+        "The reviewed project checkpoint says custom Flutter REST/realtime adapters and the new multi-conversation UI are not implemented yet."
+      ]
+    ],
+    "boundary": "In development. The reviewed checkpoint is dated September 30, 2026. Realtime/WebSocket transport is planned, not integrated into the active backend chain. No production deployment, complete new UI or live realtime demo is claimed.",
+    "screens": [],
+    "links": [
+      {
+        "label": "App & backend source",
+        "url": "https://github.com/Husseinabozina/chat_app",
+        "kind": "source"
+      },
+      {
+        "label": "Current project state",
+        "url": "https://github.com/Husseinabozina/chat_app/blob/master/docs/project/CURRENT_STATE.md",
+        "kind": "proof"
+      }
+    ],
+    "evidence": [
+      "https://github.com/Husseinabozina/chat_app",
+      "https://github.com/Husseinabozina/chat_app/blob/master/docs/project/CURRENT_STATE.md"
+    ],
+    "aliases": [
+      "chat_app"
+    ],
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "slug": "lamsa-latifa",
+    "name": "Lamsa Latifa",
+    "visible": false,
+    "featured": false,
+    "order": 107,
+    "aliases": [
+      "lamsa_latifa",
+      "lamsa-latifa-view"
+    ],
+    "pending": "Store links and artwork found. Confirm personal responsibility and client/company context before publishing a case study."
+  },
+  {
+    "slug": "jabha-maak",
+    "name": "Jabha Maak / Talabiat",
+    "visible": false,
+    "featured": false,
+    "order": 108,
+    "aliases": [
+      "talabiat",
+      "jabhamaeak-app"
+    ],
+    "pending": "Shared Android package establishes an alias relationship. Confirm naming, personal contribution and release responsibility."
+  },
+  {
+    "slug": "kesaa",
+    "name": "Kesaa",
+    "visible": false,
+    "featured": false,
+    "order": 109,
+    "aliases": [
+      "kesaa"
+    ],
+    "pending": "Needs approved product facts, screenshots, role and shareable links."
+  },
+  {
+    "slug": "beauty-more",
+    "name": "Beauty & More",
+    "visible": false,
+    "featured": false,
+    "order": 110,
+    "aliases": [
+      "beauty-more",
+      "beaty_and_more"
+    ],
+    "pending": "Confirm canonical repository, role and approved media."
+  },
+  {
+    "slug": "rawnq",
+    "name": "Rawnq",
+    "visible": false,
+    "featured": false,
+    "order": 111,
+    "aliases": [
+      "rawnq"
+    ],
+    "pending": "Needs product facts, role, public proof and screenshots."
+  },
+  {
+    "slug": "themar",
+    "name": "Themar",
+    "visible": false,
+    "featured": false,
+    "order": 112,
+    "aliases": [
+      "themar",
+      "themar_app",
+      "themar_app2"
+    ],
+    "pending": "Confirm canonical project and duplicate repository relationship."
+  },
+  {
+    "slug": "nibbles",
+    "name": "Nibbles",
+    "visible": false,
+    "featured": false,
+    "order": 113,
+    "aliases": [
+      "nibbles-E-commerce",
+      "nibbles_e_commerce"
+    ],
+    "pending": "Confirm canonical project, role, current media and status."
+  }
+]
