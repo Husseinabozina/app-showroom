@@ -75,7 +75,7 @@ writeFileSync(
     "Page not found",
     "Explore the Apps & Projects collection.",
     `<section class="not-found"><span class="eyebrow">404 / NOT IN THE COLLECTION</span><h1>Let’s get you<br>back to the work.</h1><a class="resource-link" href="./">Explore all projects</a></section>`,
-  ),
+  ).replace("<head>", '<head><base href="https://husseinabozina.github.io/app-showroom/">'),
 );
 console.log(
   `Built home, ${projects.length} project pages and 404. ${all.length - projects.length} draft records excluded.`,
