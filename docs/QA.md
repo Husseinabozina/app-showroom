@@ -28,3 +28,5 @@ The checks cover the website, not the internal behavior or current CI health of 
 - Real GitHub API smoke test used a temporary branch: one atomic commit saved the catalog plus image bytes; rereading verified both; stale catalog publication was rejected. Main stayed unchanged and the test branch was removed.
 - `npm test` passes catalog/routes/assets and manager adapter/conflict/type-validation/session-clearing checks. The Pages and quality workflows passed for the manager foundation commit.
 - Draft download uses the normal browser Blob/download flow; the in-app browser's automation did not return a download event, so downloaded-file verification was unavailable there.
+
+- Final browser connection check rejected a dummy token with GitHub’s translated 401 response. Fixed native browser `fetch` receiver binding and added a regression test; unauthenticated catalog loading now uses the API correctly. Editor controls stay disabled during initial loading.

@@ -620,6 +620,8 @@ window.addEventListener("beforeunload", (event) => {
   }
 });
 async function init() {
+  busy = true;
+  countChanges();
   try {
     const loaded = await new GitHubClient("").load();
     catalog = clone(loaded.catalog);
@@ -640,6 +642,7 @@ async function init() {
       );
     }
   }
+  busy = false;
   renderList();
 }
 init();
