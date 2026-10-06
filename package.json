@@ -1,1 +1,14 @@
-{"name":"hussein-app-showroom","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","dev":"python3 -m http.server 4173 --directory dist","test":"node scripts/validate.mjs"},"engines":{"node":">=20"}}
+{
+  "name": "hussein-app-showroom",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "python3 -m http.server 4173 --directory dist",
+    "test": "node scripts/validate.mjs && node scripts/admin.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

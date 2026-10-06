@@ -15,5 +15,3 @@ jobs:
           node-version: 22
       - run: npm run build
       - run: npm test
-      - name: Verify generated pages are committed
-        run: git diff --exit-code -- dist

@@ -8,6 +8,22 @@ const assetVersion = (file) =>
 const cssVersion = assetVersion("styles.css"),
   jsVersion = assetVersion("app.js");
 const all = JSON.parse(readFileSync("content/projects.json", "utf8"));
+mkdirSync("dist/admin", { recursive: true });
+writeFileSync("dist/admin/catalog.json", JSON.stringify(all, null, 2) + "\n");
+for (const file of ["manager.js", "index.html"]) {
+  const source = readFileSync(`dist/admin/${file}`, "utf8");
+  writeFileSync(
+    `dist/admin/${file}`,
+    source.replace(
+      /(?:manager\.css|manager\.js|core\.js)(?:\?v=[a-f0-9]+)?/g,
+      (match) => {
+        const name = match.split("?")[0];
+        return `${name}?v=${assetVersion(`admin/${name}`)}`;
+      },
+    ),
+  );
+}
+
 const projects = all.filter((p) => p.visible).sort((a, b) => a.order - b.order);
 const featured = projects.filter((p) => p.featured);
 const e = (s) =>
@@ -24,12 +40,12 @@ const tags = (p) =>
 const ext = (l) =>
   `<a class="resource-link" href="${e(l.url)}" target="_blank" rel="noopener noreferrer">${e(l.label)}<span class="sr-only"> (opens in a new tab)</span></a>`;
 function shell(title, description, body, base = "./") {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#19251f"><title>${e(title)} — Hussein Abozina</title><meta name="description" content="${e(description)}"><meta property="og:title" content="${e(title)} — Hussein Abozina"><meta property="og:description" content="${e(description)}"><meta property="og:type" content="website"><link rel="icon" href="${base}favicon.svg"><link rel="stylesheet" href="${base}styles.css?v=${cssVersion}"><script src="${base}app.js?v=${jsVersion}" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header class="header"><a class="identity" href="${base}"><span class="monogram">ha.</span><span>Hussein Abozina<span class="identity-sub">MOBILE APP DEVELOPER</span></span></a><nav aria-label="Main navigation"><a href="${base}#selected">Selected work <sup>${n(featured.length)}</sup></a><a href="${base}#collection">Collection</a><a class="contact-link" href="mailto:abozina50@gmail.com">Let’s talk</a></nav></header><main id="main">${body}</main><footer><span>© 2026 Hussein Abozina<br>Flutter & Dart · Android & iOS</span><div><a href="${base}#collection">All projects</a><a href="https://github.com/Husseinabozina" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:abozina50@gmail.com">Email</a></div></footer></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#19251f"><title>${e(title)} — Hussein Abozina</title><meta name="description" content="${e(description)}"><meta property="og:title" content="${e(title)} — Hussein Abozina"><meta property="og:description" content="${e(description)}"><meta property="og:type" content="website"><link rel="icon" href="${base}favicon.svg"><link rel="stylesheet" href="${base}styles.css?v=${cssVersion}"><script src="${base}app.js?v=${jsVersion}" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header class="header"><a class="identity" href="${base}"><span class="monogram">ha.</span><span>Hussein Abozina<span class="identity-sub">MOBILE APP DEVELOPER</span></span></a><nav aria-label="Main navigation"><a href="${base}#selected">Selected work <sup>${n(featured.length)}</sup></a><a href="${base}#collection">Collection</a><a class="contact-link" href="mailto:abozina50@gmail.com">Let’s talk</a></nav></header><main id="main">${body}</main><footer><span>© 2026 Hussein Abozina<br>Flutter & Dart · Android & iOS</span><div><a href="${base}#collection">All projects</a><a href="https://github.com/Husseinabozina" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:abozina50@gmail.com">Email</a><a href="${base}admin/">إدارة المشاريع</a></div></footer></body></html>`;
 }
 function feature(p, i) {
   const display =
     p.slug === "overdeal"
-      ? [p.screens[0], p.screens[2]]
+      ? [p.screens[0], p.screens[2] || p.screens[1]]
       : [p.screens[1], p.screens[0]];
   return `<a class="feature feature-${p.slug} ${p.mediaKind ? "store-art" : ""}" href="./projects/${p.slug}/" style="--project-color:${p.color};--project-ink:${p.ink}"><div class="feature-copy"><span class="eyebrow">${n(i + 1)} / ${e(p.category.toUpperCase())}</span><h3>${e(p.name)}</h3><p>${e(p.teaser)}</p>${tags(p)}<span class="view-project">Explore project <span aria-hidden="true">＋</span></span></div><div class="stage"><span class="stage-word" aria-hidden="true">${e(p.name)}</span>${display.map((s, j) => `<img class="screen ${j ? "screen-front" : "screen-back"}" src="./${s.src}" alt="${e(s.alt)}" width="${p.slug === "overdeal" ? 270 : 220}" height="480" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}>`).join("")}</div></a>`;
 }
@@ -75,7 +91,10 @@ writeFileSync(
     "Page not found",
     "Explore the Apps & Projects collection.",
     `<section class="not-found"><span class="eyebrow">404 / NOT IN THE COLLECTION</span><h1>Let’s get you<br>back to the work.</h1><a class="resource-link" href="./">Explore all projects</a></section>`,
-  ).replace("<head>", '<head><base href="https://husseinabozina.github.io/app-showroom/">'),
+  ).replace(
+    "<head>",
+    '<head><base href="https://husseinabozina.github.io/app-showroom/">',
+  ),
 );
 console.log(
   `Built home, ${projects.length} project pages and 404. ${all.length - projects.length} draft records excluded.`,
