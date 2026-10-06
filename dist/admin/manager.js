@@ -11,7 +11,7 @@ import {
   sources,
   engagements,
   bytesBase64,
-} from "./core.js?v=a1bd7d9eab";
+} from "./core.js?v=e887e5b687";
 const $ = (s) => document.querySelector(s),
   esc = (s) =>
     String(s ?? "").replace(
@@ -31,14 +31,23 @@ let catalog = [],
   client = null,
   selected = -1,
   uploads = new Map(),
+  publishedPreviews = new Map(),
   busy = false,
   publishedSha = "",
   pollTimer = null;
 const imageURL = (src) =>
   uploads.get("dist/" + src)?.preview ||
+  publishedPreviews.get("dist/" + src)?.preview ||
   new URL("../" + src, location.href).href;
-const changed = (p) =>
-  JSON.stringify(p) !== JSON.stringify(baseline.find((b) => b.slug === p.slug));
+const changed = (p) => {
+  const saved = baseline.find((b) => b.slug === p.slug);
+  return (
+    !saved ||
+    JSON.stringify({ ...newProject(p.order), ...p }) !==
+      JSON.stringify({ ...newProject(saved.order), ...saved })
+  );
+};
+const manualSlugs = new WeakSet();
 const changes = () => catalog.filter(changed);
 function showMessage(text, error = false) {
   $("#message").hidden = false;
@@ -105,6 +114,8 @@ function selectProject(i) {
     if (p[key] === undefined) p[key] = clone(val);
   renderList();
   renderEditor();
+  if (matchMedia("(max-width: 750px)").matches)
+    $("#editor-panel").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function renderEditor() {
   if (selected < 0) return;
@@ -165,8 +176,7 @@ function renderEditor() {
       return;
     for (const s of p.screens) discardUpload(s.src);
     catalog[selected] = clone(baseline.find((b) => b.slug === p.slug));
-    renderList();
-    renderEditor();
+    selectProject(selected);
   });
   $("#remove-new")?.addEventListener("click", () => {
     if (!confirm("إلغاء المشروع الجديد من المسودة؟")) return;
@@ -190,6 +200,7 @@ function updateField(input) {
     if (src || caption) p.video = { src, caption };
     else delete p.video;
   } else {
+    if (input.name === "slug") manualSlugs.add(p);
     p[input.name] =
       input.type === "checkbox"
         ? input.checked
@@ -204,7 +215,7 @@ function updateField(input) {
     if (
       input.name === "name" &&
       !baseline.some((b) => b.slug === p.slug) &&
-      !p.slug
+      !manualSlugs.has(p)
     ) {
       p.slug = slugify(input.value);
       $('[name="slug"]').value = p.slug;
@@ -218,6 +229,7 @@ function updateField(input) {
       $('[name="visible"]').checked = true;
     }
   }
+  $(".editor-top h2").textContent = p.name || "مشروع جديد";
   renderList();
   renderPreview();
 }
@@ -460,7 +472,7 @@ $("#publish-confirm").addEventListener("click", async () => {
       $("#disconnect").hidden = true;
       $("#connection-state").textContent = "أعد الاتصال لمتابعة التعديل";
     }
-    for (const item of uploads.values()) URL.revokeObjectURL(item.preview);
+    for (const [path, item] of uploads) publishedPreviews.set(path, item);
     uploads = new Map();
     $("#publish-dialog").close();
     $("#publish-result").hidden = false;
@@ -506,10 +518,15 @@ async function watchDeployment(attempt = 0) {
     if (run) {
       $("#workflow-link").href = run.html_url;
       if (run.status === "completed") {
-        if (run.conclusion === "success")
+        if (run.conclusion === "success") {
           $("#deployment-text").textContent =
             "اكتمل النشر. مشاريعك متاحة الآن على الموقع.";
-        else
+          for (const item of publishedPreviews.values())
+            URL.revokeObjectURL(item.preview);
+          publishedPreviews.clear();
+          renderList();
+          if (selected >= 0) renderEditor();
+        } else
           $("#deployment-text").textContent =
             "التغييرات محفوظة، لكن نشر الموقع لم يكتمل. افتح متابعة النشر لمعرفة السبب.";
         return;
@@ -578,11 +595,16 @@ $("#import-draft").addEventListener("change", async (event) => {
       });
     }
     const errors = validateCatalog(data.catalog, imported);
-    if (errors.length) throw new Error(errors.join("\n"));
+    if (errors.length) {
+      for (const item of imported.values()) URL.revokeObjectURL(item.preview);
+      throw new Error(errors.join("\n"));
+    }
     for (const s of uploads.values()) URL.revokeObjectURL(s.preview);
     uploads = imported;
     catalog = clone(data.catalog);
     selected = -1;
+    $("#editor-panel").innerHTML =
+      "<h2>اختر مشروعًا لمراجعة المسودة المستوردة</h2>";
     renderList();
     showMessage("تم استيراد المسودة. راجع المشاريع ثم احفظ وانشر.");
   } catch (e) {

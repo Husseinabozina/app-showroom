@@ -4,7 +4,7 @@ The active hosting target is GitHub Pages:
 
 https://husseinabozina.github.io/app-showroom/
 
-Pushing to `main` runs `.github/workflows/pages.yml`: build → content/link validation → generated-output consistency check → upload → deploy. Pull requests also run the quality workflow. No personal deployment credentials are stored in this repository.
+Pushing to `main` runs `.github/workflows/pages.yml`: build → content/link validation → generated-output commit when needed → upload → deploy. Pull requests also run the quality workflow. No personal deployment credentials are stored in this repository.
 
 ## Continue from another computer
 

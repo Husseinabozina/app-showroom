@@ -87,7 +87,35 @@ export function validateCatalog(catalog, uploads = new Map()) {
       error("رابط المشروع يحتاج حروفًا إنجليزية صغيرة وأرقامًا وشرطة فقط.");
     if (seen.has(p.slug)) error("رابط المشروع مستخدم بالفعل.");
     seen.add(p.slug);
-    if (!p.name?.trim()) error("اسم المشروع مطلوب.");
+    if (typeof p.name !== "string" || !p.name.trim())
+      error("اسم المشروع مطلوب.");
+    const scalarFields = [
+      "slug",
+      "name",
+      "category",
+      "status",
+      "source",
+      "engagement",
+      "color",
+      "ink",
+      "headline",
+      "summary",
+      "teaser",
+      "role",
+      "roleDetail",
+      "boundary",
+      "verifiedAt",
+      "pending",
+      "mediaKind",
+    ];
+    if (
+      scalarFields.some(
+        (key) => p[key] !== undefined && typeof p[key] !== "string",
+      )
+    ) {
+      error("حقول النص يجب أن تحتوي على نصوص فقط.");
+      continue;
+    }
     if (p.featured && !p.visible) error("المشروع المميز يجب أن يكون ظاهرًا.");
     if (!Number.isFinite(p.order) || p.order < 0)
       error("الترتيب يجب أن يكون رقمًا موجبًا أو صفرًا.");
@@ -125,7 +153,42 @@ export function validateCatalog(catalog, uploads = new Map()) {
       )
     )
       continue;
+    const textObject = (value, fields) =>
+      value &&
+      typeof value === "object" &&
+      !Array.isArray(value) &&
+      fields.every((key) => typeof value[key] === "string");
+    if (
+      (p.screens || []).some(
+        (value) => !textObject(value, ["src", "caption", "alt"]),
+      ) ||
+      (p.links || []).some(
+        (value) => !textObject(value, ["label", "url", "kind"]),
+      ) ||
+      (p.video !== undefined && !textObject(p.video, ["src", "caption"])) ||
+      ["flows", "engineering"].some((key) =>
+        (p[key] || []).some(
+          (pair) =>
+            !Array.isArray(pair) ||
+            pair.length !== 2 ||
+            !pair.every((text) => typeof text === "string"),
+        ),
+      )
+    ) {
+      error("بنية الصور أو الروابط أو تفاصيل المشروع غير صالحة.");
+      continue;
+    }
     if (!p.visible) continue;
+    for (const key of [
+      "screens",
+      "links",
+      "flows",
+      "engineering",
+      "contributions",
+      "evidence",
+      "aliases",
+    ])
+      if (!Array.isArray(p[key])) error("أكمل بنية القوائم قبل إظهار المشروع.");
     const required = {
       category: "المجال",
       headline: "عنوان القصة",
@@ -233,6 +296,7 @@ export class GitHubClient {
       method,
       headers,
       cache: "no-store",
+      signal: AbortSignal.timeout(30000),
       ...(body ? { body: JSON.stringify(body) } : {}),
     });
     if (!response.ok) {
@@ -248,7 +312,7 @@ export class GitHubClient {
       err.status = response.status;
       throw err;
     }
-    return response.json();
+    return response.status === 204 ? null : response.json();
   }
   async connect() {
     const user = await this.request("user");

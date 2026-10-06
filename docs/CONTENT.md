@@ -1,3 +1,7 @@
+# Add projects from the website
+
+The Arabic manager at https://husseinabozina.github.io/app-showroom/admin/ provides project editing, image uploads, draft export/import and publication. See [ADMIN.md](ADMIN.md) for connection and publishing instructions. The same catalog can also be edited directly as described below.
+
 # Maintaining the collection
 
 Edit `content/projects.json`, run `npm run build`, then `npm test`. The site has no database, service keys or required runtime dependencies. Commit the catalog AND generated `dist` output together.

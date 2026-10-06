@@ -31,6 +31,18 @@ assert(
     { ...newProject(), name: "Draft", slug: "draft", visible: false },
   ]).length === 0,
 );
+for (const bad of [
+  { name: 1 },
+  { screens: [null] },
+  { links: [{}] },
+  { flows: [null] },
+  { video: "invalid" },
+]) {
+  assert(
+    validateCatalog([{ ...newProject(), name: "Draft", slug: "draft", ...bad }])
+      .length > 0,
+  );
+}
 const uploads = new Map([
   ["dist/assets/test/screen-a.webp", { bytes: new Uint8Array([1, 2, 3]) }],
 ]);

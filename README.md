@@ -10,6 +10,8 @@ Node.js 20+ and Python 3 are sufficient. Run `npm run build`, then `npm run dev`
 
 ## Content
 
+Use the **[Arabic project manager](https://husseinabozina.github.io/app-showroom/admin/)** to add projects, upload screenshots, edit stories, hide/reorder entries and publish from the website. Connect with a repository-scoped GitHub token; see [manager instructions](docs/ADMIN.md).
+
 Project records live in `content/projects.json`. Edit facts, screenshots, links, `visible`, `featured`, and `order`, then rebuild. See `docs/CONTENT.md` for the editorial contract and `docs/RESEARCH.md` for provenance and missing evidence.
 
 ## Publishing and continuation
