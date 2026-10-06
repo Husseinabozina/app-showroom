@@ -47,6 +47,27 @@ const uploads = new Map([
   ["dist/assets/test/screen-a.webp", { bytes: new Uint8Array([1, 2, 3]) }],
 ]);
 assert.equal(bytesBase64(uploads.values().next().value.bytes), "AQID");
+// Native browser fetch requires a legal Window receiver. Calling a stored
+// function as a private class method must not bind it to the GitHub client.
+const originalFetch = globalThis.fetch;
+try {
+  globalThis.fetch = function () {
+    assert(
+      this === undefined || this === globalThis,
+      "fetch receiver must not be the client",
+    );
+    return Promise.resolve({
+      ok: true,
+      status: 200,
+      json: async () => ({ browser: true }),
+    });
+  };
+  assert.deepEqual(await new GitHubClient("").request("user"), {
+    browser: true,
+  });
+} finally {
+  globalThis.fetch = originalFetch;
+}
 const requests = [];
 let ref = "base",
   sha = "catalog-v1";

@@ -278,7 +278,7 @@ export function decodeContent(encoded) {
 export class GitHubClient {
   #token;
   #fetch;
-  constructor(token, transport = fetch) {
+  constructor(token, transport = (...args) => fetch(...args)) {
     this.#token = token;
     this.#fetch = transport;
   }

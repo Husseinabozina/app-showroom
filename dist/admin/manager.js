@@ -11,7 +11,7 @@ import {
   sources,
   engagements,
   bytesBase64,
-} from "./core.js?v=e887e5b687";
+} from "./core.js?v=01e75bb944";
 const $ = (s) => document.querySelector(s),
   esc = (s) =>
     String(s ?? "").replace(
