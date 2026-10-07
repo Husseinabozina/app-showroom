@@ -30,3 +30,13 @@ The checks cover the website, not the internal behavior or current CI health of 
 - Draft download uses the normal browser Blob/download flow; the in-app browser's automation did not return a download event, so downloaded-file verification was unavailable there.
 
 - Final browser connection check rejected a dummy token with GitHub’s translated 401 response. Fixed native browser `fetch` receiver binding and added a regression test; unauthenticated catalog loading now uses the API correctly. Editor controls stay disabled during initial loading.
+
+## MyShop addition — 2026-10-07
+
+- Catalog → generated pages → browser flow verified: MyShop is the eighth visible project, appears through its `My Shop` search alias and Public source filter, and opens its own detail route. The four Featured projects remain unchanged.
+- Desktop 1440×1000 and mobile 390×844 checked for hero layout, links, sourced images and gallery controls. No page-level horizontal overflow or broken sourced images. The mobile screenshot dialog fits inside the viewport; advancing and closing work.
+- Eight actual simulator captures are served as local WebP files. No generated or redrawn app screens. The source commit and recording provenance are documented in `RESEARCH.md`.
+- The public walkthrough played in the browser with readyState 4, no media error and a duration of 28.6 seconds (rounded to 29 in the caption).
+- The ARM64 Android demo download returned HTTP 200 with the expected APK content type and 24,996,328-byte size. The project presentation also returned HTTP 200.
+- Content explicitly identifies the development-branch version, demo orders and virtual MyFatoorah Sandbox payment. Website verification does not establish real-device payment acceptance; no payment or account action was performed.
+- `npm run build` and `npm test` pass for 8 visible / 7 hidden projects and the manager checks. Review dates now come from each project's catalog record.

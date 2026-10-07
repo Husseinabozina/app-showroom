@@ -14,6 +14,7 @@ Reviewed October 6, 2026. Public GitHub readmes, public presentation pages and o
 ## Canonical projects
 
 - NOVA = `fashion_e_commerce`.
+- MyShop = `shop_application` (added October 7). Presented source/media: `f6a6b7e88aa180a8f1dab16862db4394d575e790`, on `feat/myfatoorah-sandbox-branding` / PR #18, still unmerged at review. This commit only adds the presentation site/docs to Android demo source `915be6181403f523dc68ebeb91b14f508e4851ff`; app code and capture assets are identical. The default `master` README describes an older version with online payments disabled; the presented release supports MyFatoorah Sandbox. Classify as Engineering showcase / Public source, not an app-store release. Kept the four Featured exhibits and placed MyShop first after them in the wider collection.
 - HealthTrack = `medical_app`.
 - Brees = `Brees-Mobile-App`.
 - Madow = `madow`, `madow-view`, and supporting `madwo_assets`; the public page explicitly says demo and does not claim live services or payment processing.
@@ -42,6 +43,7 @@ Real app captures were copied from public repositories and resized/encoded as We
 
 - NOVA: `fashion_e_commerce/site/assets/screens/` (owner-supplied simulator captures); walkthrough uses the existing public recording.
 - Brees: `Brees-Mobile-App/screenshots/` (Flutter runtime captures).
+- MyShop: `shop_application/docs/showcase/screens/` at demo-source commit `915be6181403f523dc68ebeb91b14f508e4851ff`. Actual owner-supplied iPhone 17 Pro simulator captures from October 5; order details/summary are frames from the owner recording. Eight screenshots resized/encoded as WebP with no UI edits. The pinned public 29-second MP4 excludes sign-in and address entry. Original capture mapping/hashes are in that repository’s `docs/showcase/manifest.json`. The Android APK link is the existing `showcase-latest` pre-release (1.0.1+2, ARM64), published unchanged from CI run `37253059225`, SHA-256 `6cae72cdc8df4872c22014e62e521e9da2b1794bcbb01cf5229a6b7be547f25c`. Demo payment is a fixed virtual 1 KWD invoice, separate from the EGP basket; delivery states and sample data are illustrative.
 - HealthTrack: `medical_app/docs/assets/app-screens/` (project-published previews).
 - Madow: `madow-view/assets/screenshots/` (unframed app captures).
 - Qurani: `muslim-app-showcase/screenshots/`.

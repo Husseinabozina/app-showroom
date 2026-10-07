@@ -437,10 +437,161 @@
     "verifiedAt": "2026-10-06"
   },
   {
+    "slug": "myshop",
+    "name": "MyShop",
+    "category": "Commerce",
+    "order": 5,
+    "featured": false,
+    "visible": true,
+    "status": "Engineering showcase",
+    "source": "Public source",
+    "engagement": "Independent project",
+    "color": "#eedfd2",
+    "ink": "#4b2b1d",
+    "headline": "From a good find to a saved order.",
+    "summary": "A branded Flutter commerce demo connecting discovery, account-scoped favorites and carts, saved delivery addresses, sandbox checkout and private order history.",
+    "teaser": "A considered storefront, with the commerce behind it.",
+    "role": "Flutter product & commerce engineering",
+    "roleDetail": "Implemented the customer shopping journeys and MyShop identity, introduced feature and repository boundaries, integrated Firebase REST services, and added regression checks and native demo delivery.",
+    "contributions": [
+      "Connected browsing, search, saved products, delivery options and order review into a complete mobile journey.",
+      "Built persistent account-scoped carts and kept customer discovery separate from seller-managed catalog state.",
+      "Implemented hosted MyFatoorah Sandbox checkout with verified results, saved-attempt recovery and duplicate-order protection.",
+      "Applied a shared identity across app icons, native launch, onboarding and the storefront, including reduced-motion support.",
+      "Added Flutter shopping-journey checks, Firebase ownership-rule tests and CI for native demo builds."
+    ],
+    "flows": [
+      [
+        "Find your next favorite",
+        "Explore categories, search, sort and filter by price or availability. Inspect product galleries, stock states and saved items."
+      ],
+      [
+        "Make it yours",
+        "Build a basket that persists per account, adjust quantities, reuse saved addresses, choose delivery and review promotions and totals."
+      ],
+      [
+        "Complete and return",
+        "Place a Cash on Delivery demo order or use hosted Sandbox checkout, then return to private order history, purchased items and the delivery timeline."
+      ]
+    ],
+    "engineering": [
+      [
+        "Account boundaries",
+        "Cart storage uses a separate key for each account and serialized writes. Favorites have pending guards, rollback and protection against late refreshes. Account changes reset secondary navigation."
+      ],
+      [
+        "Payment recovery",
+        "The app restores a saved invoice attempt, checks payment status on return or manual retry, and verifies invoice identity, reference, amount, currency and Paid status before saving one demo order. Conditional writes guard against duplicates."
+      ],
+      [
+        "Replaceable integrations",
+        "Provider controllers depend on domain entities and repository contracts. Firebase Auth and Realtime Database REST mapping, local storage and payment adapters sit behind implementations; the architecture migration remains incremental."
+      ],
+      [
+        "Evidence and delivery",
+        "Flutter CI runs analysis, journey/regression checks and Android/iOS builds. Firebase rules are tested in an emulator. Automated journeys use fake HTTP data; build success does not establish live-device payment acceptance."
+      ]
+    ],
+    "boundary": "An independent portfolio demo with sample catalog content and demo orders. MyFatoorah Sandbox uses a virtual 1 KWD invoice separate from the EGP basket, with no real charges or deliveries. Delivery stages are illustrative; inventory is checked but not reserved atomically. The showcased version is on the public development branch (PR #18). The downloadable Android build is an ARM64 demo pre-release; physical iOS installation requires Apple signing.",
+    "screens": [
+      {
+        "src": "assets/myshop/home.webp",
+        "alt": "MyShop Home with search, category filters and the sample collection",
+        "caption": "Discover the storefront"
+      },
+      {
+        "src": "assets/myshop/product.webp",
+        "alt": "MyShop product details with a product gallery, price, stock and Add to cart",
+        "caption": "Inspect a good find"
+      },
+      {
+        "src": "assets/myshop/cart.webp",
+        "alt": "MyShop basket with quantity controls, product rows and an EGP subtotal",
+        "caption": "Build your basket"
+      },
+      {
+        "src": "assets/myshop/checkout.webp",
+        "alt": "MyShop checkout with a fictional test address, shipping choices and demo payment options",
+        "caption": "Choose delivery and demo payment"
+      },
+      {
+        "src": "assets/myshop/order-details.webp",
+        "alt": "Recorded MyShop order-details view with a demo delivery timeline and order status",
+        "caption": "Return to the order · recorded frame"
+      },
+      {
+        "src": "assets/myshop/onboarding-discover.webp",
+        "alt": "MyShop first-use discovery page with its terracotta shopping illustration",
+        "caption": "A considered first welcome"
+      },
+      {
+        "src": "assets/myshop/categories.webp",
+        "alt": "MyShop category discovery with sample Home, Accessories, Footwear and Audio products",
+        "caption": "Explore the collection"
+      },
+      {
+        "src": "assets/myshop/order-summary.webp",
+        "alt": "Recorded MyShop order summary with sample delivery, payment, items and total",
+        "caption": "Review every detail · recorded frame"
+      }
+    ],
+    "video": {
+      "src": "https://raw.githubusercontent.com/Husseinabozina/shop_application/915be6181403f523dc68ebeb91b14f508e4851ff/docs/showcase/myshop-demo.mp4",
+      "caption": "A 29-second selected recording of the actual Flutter app in an iPhone simulator: launch, onboarding, browsing, basket and order details. Sign-in and address-entry forms are excluded."
+    },
+    "links": [
+      {
+        "label": "Download Android demo",
+        "url": "https://github.com/Husseinabozina/shop_application/releases/download/showcase-latest/myshop-demo.apk",
+        "kind": "apk"
+      },
+      {
+        "label": "App source · showcase version",
+        "url": "https://github.com/Husseinabozina/shop_application/tree/f6a6b7e88aa180a8f1dab16862db4394d575e790",
+        "kind": "source"
+      },
+      {
+        "label": "Project presentation",
+        "url": "https://husseinabozina.github.io/shop_application/",
+        "kind": "proof"
+      },
+      {
+        "label": "Architecture notes",
+        "url": "https://github.com/Husseinabozina/shop_application/blob/f6a6b7e88aa180a8f1dab16862db4394d575e790/docs/ARCHITECTURE.md",
+        "kind": "proof"
+      },
+      {
+        "label": "Sandbox checkout & recovery",
+        "url": "https://github.com/Husseinabozina/shop_application/blob/f6a6b7e88aa180a8f1dab16862db4394d575e790/docs/sandbox-payments.md",
+        "kind": "proof"
+      },
+      {
+        "label": "Demo release & checksum",
+        "url": "https://github.com/Husseinabozina/shop_application/releases/tag/showcase-latest",
+        "kind": "proof"
+      },
+      {
+        "label": "Flutter CI evidence",
+        "url": "https://github.com/Husseinabozina/shop_application/actions/runs/37316852659",
+        "kind": "proof"
+      }
+    ],
+    "evidence": [
+      "https://github.com/Husseinabozina/shop_application/blob/f6a6b7e88aa180a8f1dab16862db4394d575e790/README.md",
+      "https://github.com/Husseinabozina/shop_application/blob/f6a6b7e88aa180a8f1dab16862db4394d575e790/docs/showcase/README.md",
+      "https://github.com/Husseinabozina/shop_application/releases/tag/showcase-latest"
+    ],
+    "aliases": [
+      "shop_application",
+      "My Shop"
+    ],
+    "verifiedAt": "2026-10-07"
+  },
+  {
     "slug": "madow",
     "name": "Madow",
     "category": "Lifestyle",
-    "order": 5,
+    "order": 6,
     "featured": false,
     "visible": true,
     "status": "Product demo",
@@ -542,7 +693,7 @@
     "slug": "qurani",
     "name": "Qurani",
     "category": "Daily life",
-    "order": 6,
+    "order": 7,
     "featured": false,
     "visible": true,
     "status": "APK available",
@@ -647,7 +798,7 @@
     "slug": "messaging",
     "name": "Mingle",
     "category": "Communication",
-    "order": 7,
+    "order": 8,
     "featured": false,
     "visible": true,
     "status": "In development",
