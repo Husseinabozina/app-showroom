@@ -645,7 +645,7 @@
   },
   {
     "slug": "messaging",
-    "name": "Messaging platform",
+    "name": "Mingle",
     "category": "Communication",
     "order": 7,
     "featured": false,
@@ -653,50 +653,86 @@
     "status": "In development",
     "source": "Public source",
     "engagement": "Engineering showcase",
-    "color": "#e3e5e9",
-    "ink": "#2b3448",
-    "headline": "Engineering the foundations of conversation.",
-    "summary": "An evolving messaging project with a Flutter client, a NestJS backend and PostgreSQL. The public repository records completed checkpoints and the remaining integration work.",
-    "teaser": "Flutter meets a documented messaging backend.",
-    "role": "Public engineering project",
-    "roleDetail": "The repository documents Flutter modernization, backend foundations, API contracts, architecture decisions and CI. The product is still under development.",
+    "color": "#f3e6e5",
+    "ink": "#162f37",
+    "headline": "A little hello can go a long way.",
+    "summary": "A warm Flutter messaging experience with real iOS simulator captures, thoughtful chat states and a growing NestJS/PostgreSQL backend. Still under active development.",
+    "teaser": "Good chats. Brighter days.",
+    "role": "Flutter product design, implementation & backend engineering",
+    "roleDetail": "Designed and developed the Flutter messaging journey and separately built documented NestJS REST foundations; real iOS simulator imagery shows a recent local build, while custom Flutter–backend integration remains pending.",
     "contributions": [
-      "Organized the Flutter client into feature-first auth and chat layers.",
-      "Documented and implemented backend auth, users, direct conversations and durable text messages.",
-      "Added read pointers, sender-owned edit/delete behavior and backend E2E verification.",
-      "Recorded realtime contracts separately from completed implementation."
+      "Created a cohesive Mingle visual experience with registration, profiles, conversations, discovery and thoughtful empty states.",
+      "Provided actual iPhone simulator screenshots and two running-app recordings for an honest product walkthrough.",
+      "Organized Flutter auth/chat into feature-first architecture with repository contracts and Cubit state management.",
+      "Implemented NestJS/PostgreSQL authentication, user discovery, direct conversations, durable messages and read/edit/delete REST flows."
     ],
     "flows": [
       [
-        "Identity",
-        "Backend authentication, user profiles and discovery."
+        "Say hello",
+        "Launch, sign-in, account creation and profile setup in the supplied local simulator captures."
       ],
       [
-        "Durable messages",
-        "Direct conversations, text persistence, read pointers, editing and soft deletion."
+        "Find your people",
+        "Discover people, browse a populated chat list and understand unread and empty states."
       ],
       [
-        "Mobile transition",
-        "The current Flutter app still runs its legacy Firebase chat behavior."
+        "Keep the conversation going",
+        "Real iOS footage shows one-to-one messages, while the version-controlled Flutter client has a separate legacy Firebase adapter."
       ]
     ],
     "engineering": [
       [
-        "Durable state first",
-        "The documented backend uses PostgreSQL, explicit migrations and REST-based durable message behavior."
+        "A design that feels alive",
+        "Pastel visual language and gentle illustrations are demonstrated in actual simulator captures and walkthrough clips."
       ],
       [
-        "Safe retries and authorization",
-        "Sender/client-message idempotency, conversation membership checks and reply isolation are documented."
+        "Durable messaging foundations",
+        "NestJS REST API, PostgreSQL migrations, conversation membership, sender idempotency, pagination and durable read pointers."
       ],
       [
-        "An honest integration boundary",
-        "The reviewed project checkpoint says custom Flutter REST/realtime adapters and the new multi-conversation UI are not implemented yet."
+        "Clear integration boundary",
+        "The custom REST/realtime adapters and Socket.IO transport are not merged into the Flutter app yet; repo status documents the next checkpoint."
       ]
     ],
-    "boundary": "In development. The reviewed checkpoint is dated September 30, 2026. Realtime/WebSocket transport is planned, not integrated into the active backend chain. No production deployment, complete new UI or live realtime demo is claimed.",
-    "screens": [],
+    "boundary": "In development. Screens and video are owner-supplied captures of a recent local simulator build, not proof that the new screens are merged into current GitHub master. The Flutter client still uses legacy Firebase messaging. NestJS REST and PostgreSQL are implemented separately; Socket.IO realtime transport and custom Flutter backend integration remain pending. No public APK or production chat service is claimed.",
+    "screens": [
+      {
+        "src": "assets/messaging/chats.webp",
+        "alt": "Mingle real iOS simulator — populated conversations and unread state",
+        "caption": "Chats home"
+      },
+      {
+        "src": "assets/messaging/conversation.webp",
+        "alt": "Mingle real iOS simulator — one-to-one message thread",
+        "caption": "One-to-one messages"
+      },
+      {
+        "src": "assets/messaging/profile.webp",
+        "alt": "Mingle real iOS simulator — profile and settings",
+        "caption": "Your profile"
+      },
+      {
+        "src": "assets/messaging/empty-state.webp",
+        "alt": "Mingle real iOS simulator — illustrated conversations empty state",
+        "caption": "Empty conversations"
+      },
+      {
+        "src": "assets/messaging/profile-setup.webp",
+        "alt": "Mingle real iOS simulator — profile setup",
+        "caption": "Profile setup"
+      },
+      {
+        "src": "assets/messaging/sign-in.webp",
+        "alt": "Mingle real iOS simulator — sign-in page",
+        "caption": "Sign in"
+      }
+    ],
     "links": [
+      {
+        "label": "Project showcase",
+        "url": "https://husseinabozina.github.io/chat_app/",
+        "kind": "proof"
+      },
       {
         "label": "App & backend source",
         "url": "https://github.com/Husseinabozina/chat_app",
@@ -710,12 +746,18 @@
     ],
     "evidence": [
       "https://github.com/Husseinabozina/chat_app",
-      "https://github.com/Husseinabozina/chat_app/blob/master/docs/project/CURRENT_STATE.md"
+      "https://husseinabozina.github.io/chat_app/"
     ],
     "aliases": [
-      "chat_app"
+      "chat_app",
+      "Mingle",
+      "messaging"
     ],
-    "verifiedAt": "2026-10-06"
+    "verifiedAt": "2026-10-07",
+    "video": {
+      "src": "https://raw.githubusercontent.com/Husseinabozina/chat_app/master/site/assets/walkthrough.mp4",
+      "caption": "15-second walkthrough recorded from the running iPhone simulator. Shows messages, conversations, people discovery and navigation."
+    }
   },
   {
     "slug": "lamsa-latifa",
