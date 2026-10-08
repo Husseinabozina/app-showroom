@@ -37,3 +37,7 @@ The home page's “20+ applications” and “~5 years” come from Hussein's br
 - `scripts/validate.mjs`: checks publication contracts, local references and hidden routes.
 
 All content and navigation remain readable without JavaScript. Filters and the enlarged screenshot dialog require JavaScript. Search matches titles, categories, status, source labels and known repository aliases. Query/filter state is retained in the URL.
+
+## Native projects and screenshot platforms
+
+Optional `implementation` is a short text label such as `Native iOS & Android`, `Native iOS` or `Native Android`. It appears beside status/source, participates in search and enables the Native filter for labels beginning with `Native`. Leave it empty for projects without this label. Optional `mediaCaption` states the capture platform/source (for example, Android app captures with fictional presentation data); it appears on the detail stage and gallery introduction. Both fields are editable in the website manager and retained on save/export/import. A project's implementation platforms and screenshot platforms need not be identical; never label Android images as iOS evidence.

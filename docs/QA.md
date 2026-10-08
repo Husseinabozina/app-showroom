@@ -44,3 +44,7 @@ The checks cover the website, not the internal behavior or current CI health of 
 ## Etzan addition — October 8, 2026
 
 Build and catalog/generated-route validation passed (9 visible projects, 7 hidden drafts); existing manager publication tests passed. Verified unchanged screenshot hashes. Browser review at desktop, 390px and 320px: no document overflow. Arabic search `اتزان` returns one canonical entry. Screenshot viewer opens, advances from 1/7 to 2/7 and closes. Presentation and APK links returned HTTP 200. Android installation and live backend behavior were not tested.
+
+## Mahami native exhibit — October 8, 2026
+
+Build, generated-route/evidence checks (10 visible, 7 hidden) and existing manager publication tests passed. Eight original Android screenshot hashes match the pinned source; the two portfolio images match the same originals. Browser review: desktop 1280px and mobile 390px/320px; native detail and collection had no document overflow. Native filter returns one project; Arabic `مهامي` search and filter survive reload through URL state. Image viewer opens at 1/8, advances to 2/8 and closes. Native stack labels and Android capture provenance are visible. Native app runtime, device/cloud acceptance and Figma screen fidelity were not tested in this website task; the project page attributes recorded app checks to its own source notes.

@@ -1,0 +1,18 @@
+{
+  "sourceRepository": "https://github.com/Husseinabozina/task_management_native",
+  "sourceCommit": "f4bc915db43a10a883ea921bee62b8ae7e15b02c",
+  "suppliedDate": "2026-10-08",
+  "platform": "Android",
+  "presentationData": "fictional",
+  "sourceDirectory": "docs/showcase/screenshots",
+  "unchangedScreenshotSHA256": {
+    "dist/assets/mahami/home.jpg": "72bc019b5221b84647c25270726a3dd35c49af0f5afa69e4cdb6c9bc4242c735",
+    "dist/assets/mahami/tasks.jpg": "ca3cbd3e97500fe754a3a5121c32cad76be927323f2ceeb7e55a28fa6823aceb",
+    "dist/assets/mahami/projects.jpg": "7446824fed6d1dee60c2b0e5a4fdb2f9b54971814c17dbdb013cd05ce2374048",
+    "dist/assets/mahami/task-detail.jpg": "fd83ea9f939900905e850afee11ef78ec4ef78e3972a30f84ba55dd2ea08cd2e",
+    "dist/assets/mahami/new-task.jpg": "b09ea3019c28f0686f7067e168130542ea5506b7cda51257a5222b75ecd9301c",
+    "dist/assets/mahami/new-project.jpg": "ff2decef736c9bdca23caff0e29ade3384e3425c68fda1bd44eccd937c9e9ec2",
+    "dist/assets/mahami/task-description.jpg": "41a6abc69eca78872ee99f48bc98acd51d59d32542ce04f18a5e24fbd06c2633",
+    "dist/assets/mahami/welcome.jpg": "3d0a03ab86e7532634e1a1705b4f337000e1db481391b3a55f07088f3e6acbb5"
+  }
+}

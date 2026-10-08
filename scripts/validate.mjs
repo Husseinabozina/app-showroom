@@ -8,6 +8,9 @@ for (const p of catalog) {
   assert.match(p.slug, /^[a-z][a-z0-9-]*$/);
   assert(!slugs.has(p.slug), `Duplicate slug: ${p.slug}`);
   slugs.add(p.slug);
+  for (const key of ["implementation", "mediaCaption"])
+    if (p[key] !== undefined)
+      assert.equal(typeof p[key], "string", `${p.slug}: invalid ${key}`);
   if (!p.visible) {
     assert(
       !existsSync(`dist/projects/${p.slug}`),

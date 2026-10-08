@@ -37,6 +37,8 @@ export function newProject(order = 1) {
     slug: "",
     name: "",
     category: "",
+    implementation: "",
+    mediaCaption: "",
     order,
     featured: false,
     visible: false,
@@ -107,6 +109,8 @@ export function validateCatalog(catalog, uploads = new Map()) {
       "verifiedAt",
       "pending",
       "mediaKind",
+      "implementation",
+      "mediaCaption",
     ];
     if (
       scalarFields.some(

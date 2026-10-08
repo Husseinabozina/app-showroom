@@ -15,6 +15,7 @@
       cards.forEach((c) => {
         const type =
           filter === "all" ||
+          (filter === "native" && c.dataset.implementation.startsWith("Native")) ||
           (filter === "published" && c.dataset.status === "Published") ||
           (filter === "public" && c.dataset.source === "Public source") ||
           (filter === "private" && c.dataset.source === "Private source");
