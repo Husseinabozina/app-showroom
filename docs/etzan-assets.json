@@ -1,0 +1,16 @@
+{
+  "sourceRepository": "https://github.com/Husseinabozina/ettzan",
+  "sourceCommit": "7acc26b2c916378469582f7a43a6b067e45c2751",
+  "captureDate": "2026-09-30",
+  "captureDevice": "iPhone 16e Simulator",
+  "sourceDirectory": "docs/showcase/assets/screens",
+  "unchangedScreenshotSHA256": {
+    "dist/assets/etzan/guest-home.png": "10eac878be770899b47ccf9c408fce972f968c42b6d77c8ab7732edb06ea9f9b",
+    "dist/assets/etzan/coaches.png": "43b54427d03e781b60d350c16d0055f041f1a5601f4320747a3ee0cb1a11423d",
+    "dist/assets/etzan/goals.png": "459173a058099e858dda885e42a4fa6f6a568306c9ec6a81ae80eec02751e3c5",
+    "dist/assets/etzan/dashboard.png": "2513fc4ae13b6b8cc0e183b79ff75bd02c8c65d12ff31b748fb0c8093561bb8d",
+    "dist/assets/etzan/profile.png": "1997108a0c3a8aa5cb757010fcbb328bf35509a3a9d595e2d7e5d72bf337bd73",
+    "dist/assets/etzan/onboarding.png": "a6525c0b3e842d23187d5fd70999530703b9ee9a726f3c61f232a4a6f409a7d9",
+    "dist/assets/etzan/signup.png": "63c509006617ac2cccf7539a7c45cadc52088a6740ce643532f9b5f6e78b38ad"
+  }
+}

@@ -40,3 +40,7 @@ The checks cover the website, not the internal behavior or current CI health of 
 - The ARM64 Android demo download returned HTTP 200 with the expected APK content type and 24,996,328-byte size. The project presentation also returned HTTP 200.
 - Content explicitly identifies the development-branch version, demo orders and virtual MyFatoorah Sandbox payment. Website verification does not establish real-device payment acceptance; no payment or account action was performed.
 - `npm run build` and `npm test` pass for 8 visible / 7 hidden projects and the manager checks. Review dates now come from each project's catalog record.
+
+## Etzan addition — October 8, 2026
+
+Build and catalog/generated-route validation passed (9 visible projects, 7 hidden drafts); existing manager publication tests passed. Verified unchanged screenshot hashes. Browser review at desktop, 390px and 320px: no document overflow. Arabic search `اتزان` returns one canonical entry. Screenshot viewer opens, advances from 1/7 to 2/7 and closes. Presentation and APK links returned HTTP 200. Android installation and live backend behavior were not tested.

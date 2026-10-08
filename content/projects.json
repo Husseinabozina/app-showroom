@@ -440,7 +440,7 @@
     "slug": "myshop",
     "name": "MyShop",
     "category": "Commerce",
-    "order": 5,
+    "order": 6,
     "featured": false,
     "visible": true,
     "status": "Engineering showcase",
@@ -581,14 +581,17 @@
       "https://github.com/Husseinabozina/shop_application/blob/f6a6b7e88aa180a8f1dab16862db4394d575e790/docs/showcase/README.md",
       "https://github.com/Husseinabozina/shop_application/releases/tag/showcase-latest"
     ],
-    "aliases": ["shop_application", "My Shop"],
+    "aliases": [
+      "shop_application",
+      "My Shop"
+    ],
     "verifiedAt": "2026-10-07"
   },
   {
     "slug": "madow",
     "name": "Madow",
     "category": "Lifestyle",
-    "order": 6,
+    "order": 7,
     "featured": false,
     "visible": true,
     "status": "Product demo",
@@ -690,7 +693,7 @@
     "slug": "qurani",
     "name": "Qurani",
     "category": "Daily life",
-    "order": 7,
+    "order": 8,
     "featured": false,
     "visible": true,
     "status": "APK available",
@@ -795,7 +798,7 @@
     "slug": "messaging",
     "name": "Mingle",
     "category": "Communication",
-    "order": 8,
+    "order": 9,
     "featured": false,
     "visible": true,
     "status": "In development",
@@ -989,5 +992,135 @@
       "nibbles_e_commerce"
     ],
     "pending": "Confirm canonical project, role, current media and status."
+  },
+  {
+    "slug": "etzan",
+    "name": "Etzan · اتزان",
+    "category": "Personal growth",
+    "order": 5,
+    "featured": false,
+    "visible": true,
+    "status": "Engineering showcase",
+    "source": "Public source",
+    "engagement": "Independent project",
+    "color": "#d8eeea",
+    "ink": "#123f42",
+    "headline": "Small steps. A more intentional day.",
+    "summary": "An Arabic-first personal-growth and life-coaching app connecting coach discovery, goals, daily habits, journaling and progress in one Flutter experience.",
+    "teaser": "Coaches, goals and everyday habits. One connected journey.",
+    "role": "Product design & Flutter engineering",
+    "roleDetail": "Designed and developed Etzan: the Flutter interface, feature journeys, shared design system, Arabic/English layouts and Supabase client integrations.",
+    "contributions": [
+      "Designed and implemented onboarding, account creation and guest exploration.",
+      "Built coach discovery, profiles and booking/session interfaces alongside goals, habits and daily planning.",
+      "Implemented journaling, mood selection, progress dashboards and account interfaces.",
+      "Organized shared UI and feature code, with layered Auth, Dashboard and Notifications implementations, Cubit state and GetIt dependency injection.",
+      "Integrated Supabase Auth, database, Storage and realtime access in the mobile codebase."
+    ],
+    "flows": [
+      [
+        "Find your starting point",
+        "Explore as a guest, discover coaches by name or specialty, and browse coach profiles. Booking, sessions and chat interfaces depend on configured services."
+      ],
+      [
+        "Turn intention into a routine",
+        "Create goals and milestones, track habits and organize a daily plan with calendar views."
+      ],
+      [
+        "Reflect and keep perspective",
+        "Journal, select a mood and review personal progress alongside profile and achievement views."
+      ]
+    ],
+    "engineering": [
+      [
+        "Arabic-first, shared foundations",
+        "A shared design system supports Arabic/English localization, RTL/LTR layouts, adaptive navigation and light/dark settings."
+      ],
+      [
+        "Feature and data boundaries",
+        "Features share core UI and infrastructure. Auth, Dashboard and Notifications use presentation/domain/data layers, repositories, use cases, Cubit and dependency injection; other journeys use a shared backend repository."
+      ],
+      [
+        "Service-aware delivery",
+        "The mobile implementation connects to Supabase. Account flows require configured tables, RPCs, storage buckets and access policies; the repository includes supporting SQL and backend notes, rather than a complete database bootstrap. Mapper, widget and smoke-test sources are available for review."
+      ]
+    ],
+    "boundary": "An independent personal-growth and life-coaching portfolio project, not a clinical treatment product or an app-store release. The Android APK is a portfolio preview, built in release mode but signed with a debug certificate. Service-backed journeys need an available, configured backend; payment-provider integration is not implemented. Screenshots show the interface at capture time, not guaranteed live data or business results.",
+    "screens": [
+      {
+        "src": "assets/etzan/guest-home.png",
+        "alt": "Explore as a guest — Etzan Arabic app screenshot",
+        "caption": "Explore as a guest"
+      },
+      {
+        "src": "assets/etzan/coaches.png",
+        "alt": "Discover coaches — Etzan Arabic app screenshot",
+        "caption": "Discover coaches"
+      },
+      {
+        "src": "assets/etzan/goals.png",
+        "alt": "Goals and daily habits — Etzan Arabic app screenshot",
+        "caption": "Goals and daily habits"
+      },
+      {
+        "src": "assets/etzan/dashboard.png",
+        "alt": "Personal progress dashboard — Etzan Arabic app screenshot",
+        "caption": "Personal progress dashboard"
+      },
+      {
+        "src": "assets/etzan/profile.png",
+        "alt": "Profile and achievements — Etzan Arabic app screenshot",
+        "caption": "Profile and achievements"
+      },
+      {
+        "src": "assets/etzan/onboarding.png",
+        "alt": "An Arabic-first introduction — Etzan Arabic app screenshot",
+        "caption": "An Arabic-first introduction"
+      },
+      {
+        "src": "assets/etzan/signup.png",
+        "alt": "Create an account — Etzan Arabic app screenshot",
+        "caption": "Create an account"
+      }
+    ],
+    "links": [
+      {
+        "label": "Try Android preview",
+        "url": "https://github.com/Husseinabozina/ettzan/releases/download/v1.1.0-showcase/etzan-1.1.0-showcase.apk",
+        "kind": "apk"
+      },
+      {
+        "label": "App source",
+        "url": "https://github.com/Husseinabozina/ettzan",
+        "kind": "source"
+      },
+      {
+        "label": "Project presentation",
+        "url": "https://husseinabozina.github.io/ettzan/",
+        "kind": "proof"
+      },
+      {
+        "label": "Release notes & checksum",
+        "url": "https://github.com/Husseinabozina/ettzan/releases/tag/v1.1.0-showcase",
+        "kind": "proof"
+      },
+      {
+        "label": "Backend setup notes",
+        "url": "https://github.com/Husseinabozina/ettzan/blob/main/supabase/README.md",
+        "kind": "proof"
+      }
+    ],
+    "evidence": [
+      "https://github.com/Husseinabozina/ettzan/blob/7acc26b2c916378469582f7a43a6b067e45c2751/README.md",
+      "https://github.com/Husseinabozina/ettzan/blob/7acc26b2c916378469582f7a43a6b067e45c2751/docs/showcase/assets/PROVENANCE.md",
+      "https://github.com/Husseinabozina/ettzan/blob/7acc26b2c916378469582f7a43a6b067e45c2751/lib/core/di/injection.dart"
+    ],
+    "aliases": [
+      "ettzan",
+      "etzan",
+      "Etzan",
+      "اتزان"
+    ],
+    "verifiedAt": "2026-10-08"
   }
 ]

@@ -52,3 +52,9 @@ Real app captures were copied from public repositories and resized/encoded as We
 Store image source URLs are recorded in `docs/store-assets.json`. Unpublished Lamsa/Jabha assets are retained for future editing but not displayed. Assets remain the property of their respective owners. Source-code visibility does not grant a license to redistribute third-party artwork separately.
 
 Manrope is self-hosted under the SIL Open Font License; see `dist/assets/fonts/OFL.txt`. The showroom identity/layout is original and does not reproduce existing presentation-site layouts.
+
+## Etzan — added October 8, 2026
+
+Canonical project: `ettzan` (Etzan / اتزان), reviewed at `7acc26b2c916378469582f7a43a6b067e45c2751`. The README credits Hussein with design and development. It is an independent Arabic-first personal-growth/life-coaching Flutter project, classified Engineering showcase / Public source. The public Pages URL presents the project; it is not a browser app. The existing v1.1.0-showcase APK is a release-mode portfolio preview signed with a debug certificate, not a store or production-signed release. Payment-provider integration is not implemented. Supabase client integration is present in `lib/core/di/injection.dart` and feature data sources; service availability and complete backend setup were not independently verified. Proposed API contracts and older architecture notes are not treated as proof of a deployed REST backend.
+
+Seven original PNG captures are copied unchanged from `docs/showcase/assets/screens/`: guest home, coaches, goals, dashboard, profile, onboarding and **Create account** (not Login). Capture provenance identifies the iPhone 16e Simulator, September 30. Branded posters are intentionally excluded. Source commit and original hashes are recorded in `docs/etzan-assets.json`. No app walkthrough video was found. Etzan appears in the wider collection; the existing four Featured exhibits retain their hierarchy.
