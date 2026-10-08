@@ -702,13 +702,13 @@
     "color": "#dce9df",
     "ink": "#204735",
     "headline": "A quiet space for daily practice.",
-    "summary": "A Flutter Islamic app bringing together prayer times, Quran and tafsir, adhkar, Qibla direction and Hijri dates.",
+    "summary": "A Flutter Islamic app bringing together prayer times, Quran reading, daily adhkar, tasbih, Qibla direction and Hijri dates in a calm Arabic-first experience.",
     "teaser": "Quran, prayer times and daily remembrance.",
     "role": "Flutter app development",
-    "roleDetail": "The public project presentation identifies Hussein Abozina as the developer. Application source is maintained privately.",
+    "roleDetail": "Developed the Flutter app presented through the public Qurani showcase. Application source is maintained privately; the public materials provide the current product screens and Android build.",
     "contributions": [
-      "Developed the Flutter app presented through the public Qurani showcase.",
-      "Provided a public Android APK and app screenshots for hands-on review."
+      "Built the Arabic-first mobile experience around prayer times, Quran reading, adhkar, tasbih and Qibla guidance.",
+      "Provided a public Android APK and current product screens for hands-on review."
     ],
     "flows": [
       [
@@ -737,34 +737,19 @@
     "boundary": "A public Android APK is available through the presentation repository. No app-store publication is claimed. More detailed architecture and ownership breakdown are not documented in the public source.",
     "screens": [
       {
-        "src": "assets/qurani/screenshot_1.webp",
-        "alt": "App screen 1 — qurani",
-        "caption": "App screen 1"
+        "src": "assets/qurani/features.webp",
+        "alt": "Current Qurani home, tasbih, Quran and Qibla screens",
+        "caption": "Current core experience"
       },
       {
-        "src": "assets/qurani/screenshot_2.webp",
-        "alt": "App screen 2 — qurani",
-        "caption": "App screen 2"
+        "src": "assets/qurani/onboarding.webp",
+        "alt": "Current Qurani Arabic-first onboarding screens",
+        "caption": "Current onboarding"
       },
       {
-        "src": "assets/qurani/screenshot_3.webp",
-        "alt": "App screen 3 — qurani",
-        "caption": "App screen 3"
-      },
-      {
-        "src": "assets/qurani/screenshot_4.webp",
-        "alt": "App screen 4 — qurani",
-        "caption": "App screen 4"
-      },
-      {
-        "src": "assets/qurani/screenshot_5.webp",
-        "alt": "App screen 5 — qurani",
-        "caption": "App screen 5"
-      },
-      {
-        "src": "assets/qurani/screenshot_6.webp",
-        "alt": "App screen 6 — qurani",
-        "caption": "App screen 6"
+        "src": "assets/qurani/brand.webp",
+        "alt": "Current Qurani emerald and gold app identity",
+        "caption": "Current Qurani identity"
       }
     ],
     "links": [
@@ -792,7 +777,7 @@
       "muslim_view",
       "muslim-app-showcase"
     ],
-    "verifiedAt": "2026-10-06"
+    "verifiedAt": "2026-10-08"
   },
   {
     "slug": "messaging",
