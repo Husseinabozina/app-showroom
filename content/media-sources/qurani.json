@@ -1,0 +1,42 @@
+{
+  "project": "qurani",
+  "reviewedAt": "2026-10-10",
+  "note": "Current individual captures replace landscape presentation composites in the portrait collection, hero and screenshot gallery. Original composites are not used as app screenshots.",
+  "assets": [
+    {
+      "asset": "assets/qurani/home.png",
+      "source": "Owner-supplied current app capture",
+      "originalFilename": "Screenshot_1791423659.png",
+      "sha256": "699331b824bd5e29eb1a5139c33e76f1a6a86b0f5d01c182bd4d6b9b27041c1b",
+      "processing": "Byte-for-byte copy; no retouching, cropping or reconstruction"
+    },
+    {
+      "asset": "assets/qurani/mushaf.jpg",
+      "source": "Owner-supplied current app capture",
+      "originalFilename": "qurany-mushaf-original.jpg",
+      "sha256": "827768de2856bd3cef18968f8ef1dcd032dc39f1148fa4e2e65ac87c2523bcc9",
+      "processing": "Byte-for-byte copy; no retouching, cropping or reconstruction"
+    },
+    {
+      "asset": "assets/qurani/names-of-allah.png",
+      "source": "Owner-supplied current app capture",
+      "originalFilename": "Screenshot_1791423679.png",
+      "sha256": "52fbd1ee23eb854fbb00ce435a5cb8950c65f614749fa9df890d12d3932c3cf7",
+      "processing": "Byte-for-byte copy; no retouching, cropping or reconstruction"
+    },
+    {
+      "asset": "assets/qurani/forty-nawawi.png",
+      "source": "Owner-supplied current app capture",
+      "originalFilename": "Screenshot_1791423693.png",
+      "sha256": "68e2c080514b8071a5e2042ab8a487a6a9d81fbed6b5961a0f5a9a136be66f04",
+      "processing": "Byte-for-byte copy; no retouching, cropping or reconstruction"
+    },
+    {
+      "asset": "assets/qurani/splash.png",
+      "source": "Owner-supplied current app capture",
+      "originalFilename": "Screenshot_1791423641.png",
+      "sha256": "5bdc2ac3f742881ef60716b48cc4ecd98faefb0ea4bfe2a56e5c0eca0570590f",
+      "processing": "Byte-for-byte copy; no retouching, cropping or reconstruction"
+    }
+  ]
+}

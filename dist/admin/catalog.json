@@ -737,19 +737,29 @@
     "boundary": "A public Android APK is available through the presentation repository. No app-store publication is claimed. More detailed architecture and ownership breakdown are not documented in the public source.",
     "screens": [
       {
-        "src": "assets/qurani/features.webp",
-        "alt": "Current Qurani home, tasbih, Quran and Qibla screens",
-        "caption": "Current core experience"
+        "src": "assets/qurani/home.png",
+        "alt": "Qurani current Android home with prayer times and daily tools",
+        "caption": "Prayer times and daily tools"
       },
       {
-        "src": "assets/qurani/onboarding.webp",
-        "alt": "Current Qurani Arabic-first onboarding screens",
-        "caption": "Current onboarding"
+        "src": "assets/qurani/mushaf.jpg",
+        "alt": "Qurani current Mushaf reading screen supplied by the project owner",
+        "caption": "Read the Mushaf"
       },
       {
-        "src": "assets/qurani/brand.webp",
-        "alt": "Current Qurani emerald and gold app identity",
-        "caption": "Current Qurani identity"
+        "src": "assets/qurani/names-of-allah.png",
+        "alt": "Qurani current Android Names of Allah screen with search and saved entries",
+        "caption": "Explore the Names of Allah"
+      },
+      {
+        "src": "assets/qurani/forty-nawawi.png",
+        "alt": "Qurani current Android Forty Nawawi screen with search and saved entries",
+        "caption": "Read the Forty Nawawi"
+      },
+      {
+        "src": "assets/qurani/splash.png",
+        "alt": "Qurani current Android splash with the emerald and gold Arabic logo",
+        "caption": "Qurani app identity"
       }
     ],
     "links": [
@@ -765,7 +775,7 @@
       },
       {
         "label": "Project presentation",
-        "url": "https://husseinabozina.github.io/muslim_view/",
+        "url": "https://hussein-abozina-portfolio.vercel.app/projects/qurany.html",
         "kind": "proof"
       }
     ],
@@ -777,7 +787,8 @@
       "muslim_view",
       "muslim-app-showcase"
     ],
-    "verifiedAt": "2026-10-08"
+    "verifiedAt": "2026-10-10",
+    "mediaCaption": "Screens from the current Android app"
   },
   {
     "slug": "messaging",
