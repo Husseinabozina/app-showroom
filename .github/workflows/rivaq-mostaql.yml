@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist/rivaq/mostaql/images/*.png dist/rivaq/mostaql/RIVAQ_Mostaql_Portfolio_Assets.zip
+          git add dist/rivaq/mostaql/images/*.png dist/rivaq/mostaql/images/PREVIEW_*.svg dist/rivaq/mostaql/RIVAQ_Mostaql_Portfolio_Assets.zip
           if ! git diff --cached --quiet; then
             git commit -m "assets: publish RIVAQ Mostaql portfolio graphics"
             git pull --rebase origin main
