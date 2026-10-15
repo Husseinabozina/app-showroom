@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="590" viewBox="0 0 1440 590" role="img" aria-labelledby="ttl desc">
+<title id="ttl">RIVAQ — رِواق | Arabic commerce experience</title>
+<desc id="desc">Premium olive green and warm ivory editorial cover, RIVAQ architectural arch emblem and Arabic storefront identity. Branded illustration, not a captured screenshot.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F9F7F0"/><stop offset="1" stop-color="#EDE9DC"/></linearGradient><linearGradient id="forest" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#234538"/><stop offset="1" stop-color="#122820"/></linearGradient><pattern id="grain" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="6" cy="11" r="0.9" fill="#18372C" opacity=".10"/><circle cx="24" cy="27" r=".8" fill="#18372C" opacity=".12"/></pattern></defs>
+<rect width="1440" height="590" fill="url(#bg)"/><rect width="1440" height="590" fill="url(#grain)"/>
+<rect x="0" y="0" width="538" height="590" fill="url(#forest)"/>
+<path d="M78 504V236a191 191 0 0 1 382 0v268" fill="none" stroke="#E9DFC6" stroke-width="2" opacity=".24"/>
+<path d="M139 504V244a130 130 0 0 1 260 0v260" fill="none" stroke="#D8BD82" stroke-width="2" opacity=".46"/>
+<path d="M202 496V263a67 67 0 0 1 134 0v233" fill="none" stroke="#E9DFC6" stroke-width="2" opacity=".56"/>
+<path d="M239 367V263c0-18 12-30 29-30 18 0 30 12 30 30s-12 30-30 30h-29m29 0 43 74" fill="none" stroke="#E0C48E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="304" cy="212" r="9" fill="#C89E5B"/>
+<text x="265" y="546" font-family="Arial,sans-serif" font-size="14" fill="#E9DFC6" text-anchor="middle" letter-spacing="6">THE DETAILS MATTER</text>
+<text x="1355" y="86" text-anchor="end" font-family="Arial,sans-serif" font-size="16" letter-spacing="5" fill="#807E70">THE RIVAQ PROJECT   /   2026</text>
+<path d="M645 118h709" stroke="#CBD2C7" stroke-width="1"/>
+<text x="1358" y="250" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="105" font-weight="700" fill="#1C3B2E">رِواق</text>
+<text x="1352" y="326" text-anchor="end" font-family="Arial,sans-serif" font-size="44" letter-spacing="15" fill="#B88C4A">RIVAQ</text>
+<text x="1355" y="401" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="32" fill="#243C31">تجربة تسوّق عربية. بلمسة مختلفة.</text>
+<text x="1355" y="449" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#667268">هوية بصرية مستقلة · واجهة RTL · رحلة طلب تجريبية</text>
+<path d="M645 494h709" stroke="#CBD2C7" stroke-width="1"/>
+<text x="1355" y="543" text-anchor="end" font-family="Arial,sans-serif" font-size="15" letter-spacing="4" fill="#7B7F73">REACT  /  TYPESCRIPT  /  RESPONSIVE DESIGN</text>
+<circle cx="664" cy="543" r="8" fill="#B88C4A"/>
+</svg>
