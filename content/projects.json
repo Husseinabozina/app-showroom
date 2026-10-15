@@ -1284,5 +1284,83 @@
       "Native Android"
     ],
     "verifiedAt": "2026-10-08"
+  },
+  {
+    "slug": "rivaq",
+    "name": "RIVAQ · رِواق",
+    "category": "Commerce",
+    "order": 11,
+    "featured": false,
+    "visible": true,
+    "status": "Interactive web showcase",
+    "source": "Private source",
+    "engagement": "Independent project",
+    "color": "#dbe4d2",
+    "ink": "#193a2c",
+    "headline": "An Arabic storefront with its own sense of place.",
+    "summary": "An Arabic-first, responsive multi-department commerce demonstration with a distinct olive and ivory visual identity, connected shopping flows and a demo-only checkout.",
+    "teaser": "A considered Arabic shopping journey, from discovery to demo checkout.",
+    "role": "Frontend design & web implementation",
+    "roleDetail": "Created the independent RTL storefront experience, connected browsing and basket behaviours, reusable React interface, documented commerce rules, and a separate design-led portfolio case study.",
+    "contributions": [
+      "Built the responsive storefront around eight departments and a 32-product illustrative catalog.",
+      "Connected URL-shareable filtering, search, product options, wishlist and persistent cart.",
+      "Implemented a demo checkout with coupon and shipping logic and session-only confirmation summaries.",
+      "Created an original architectural identity, Arabic-first styling and a standalone public visual case study."
+    ],
+    "flows": [
+      [
+        "Discover",
+        "Browse eight categories, featured items, product photography, offers and a shared search interface."
+      ],
+      [
+        "Choose",
+        "Filter, sort, inspect product variants and save items to a local wishlist and cart."
+      ],
+      [
+        "Complete a demo order",
+        "Review EGP totals and coupon rules, enter fictional test details and receive a non-transactional confirmation."
+      ]
+    ],
+    "engineering": [
+      [
+        "Typed component boundaries",
+        "React 19 and TypeScript with catalog data, commerce calculations, app state and route components separated."
+      ],
+      [
+        "RTL design system",
+        "CSS design tokens, logical directions, accessible controls, reduced-motion handling and responsive product grids."
+      ],
+      [
+        "Browser quality checks",
+        "Playwright checks exercise shopping flows, coupon and free-shipping calculations, and four responsive viewport widths."
+      ]
+    ],
+    "boundary": "A portfolio-only commerce demonstration. Prices, availability, shipping, products and orders are fictional. No payments, users, database or order transmission. The visual uses separately licensed illustrative catalog photos. The source repository is private.",
+    "screens": [
+      {
+        "src": "assets/rivaq/brand-art.svg",
+        "alt": "Original olive-green RIVAQ architectural logo artwork; a brand graphic, not a storefront screenshot.",
+        "caption": "RIVAQ original visual identity"
+      }
+    ],
+    "mediaKind": "Brand artwork",
+    "mediaCaption": "Original brand artwork, not a captured app screen; the linked standalone case study uses illustrative catalog photographs.",
+    "links": [
+      {
+        "label": "Public project presentation",
+        "url": "https://husseinabozina.github.io/app-showroom/rivaq/",
+        "kind": "presentation"
+      }
+    ],
+    "evidence": [
+      "https://husseinabozina.github.io/app-showroom/rivaq/"
+    ],
+    "aliases": [
+      "rivaq-store",
+      "رواق",
+      "رِواق"
+    ],
+    "verifiedAt": "2026-10-16"
   }
 ]
