@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 960" width="600" height="960" role="img" aria-labelledby="title desc">
+<title id="title">RIVAQ — original olive-green visual identity artwork</title>
+<desc id="desc">Portfolio graphic featuring the RIVAQ architectural arch logo, Arabic wordmark, and warm cream typography. This is brand artwork, not a screenshot.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#355645"/><stop offset="1" stop-color="#0f271e"/></linearGradient><pattern id="dots" width="33" height="33" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#f6efd9" opacity=".16"/></pattern></defs>
+<rect width="600" height="960" fill="url(#g)"/><rect width="600" height="960" fill="url(#dots)"/>
+<path d="M70 690V316C70 181 172 79 300 79s230 102 230 237v374" stroke="#eadcc0" stroke-width="2" opacity=".28" fill="none"/>
+<path d="M111 692V322C111 208 196 122 300 122s189 86 189 200v370" stroke="#c9a56a" stroke-width="3" opacity=".84" fill="none"/>
+<path d="M163 691V336c0-82 60-142 137-142s137 60 137 142v355" stroke="#f2e4cc" stroke-width="2" opacity=".62" fill="none"/>
+<path d="M240 549V337c0-38 25-61 60-61 37 0 62 25 62 62 0 36-25 60-61 60h-61m61 0 73 151" stroke="#e9d2a1" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="367" cy="241" r="13" fill="#c59c54"/>
+<rect x="80" y="731" width="440" height="1" fill="#e8d4ac" opacity=".32"/>
+<text x="300" y="791" fill="#f9f2e2" font-size="75" text-anchor="middle" font-weight="700" font-family="Tahoma,Arial,sans-serif">رِواق</text>
+<text x="300" y="844" fill="#d6b77e" font-size="27" text-anchor="middle" font-weight="800" letter-spacing="12" font-family="Arial,sans-serif">RIVAQ</text>
+<text x="300" y="908" fill="#d9dfd2" font-size="13" text-anchor="middle" font-weight="700" letter-spacing="4" font-family="Arial,sans-serif">ARABIC COMMERCE · 2026</text>
+</svg>
