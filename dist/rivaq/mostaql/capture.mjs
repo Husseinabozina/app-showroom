@@ -20,7 +20,7 @@ try{
   const state=await page.evaluate(()=>{
     const box=document.querySelector('.canvas').getBoundingClientRect();
     const images=Array.from(document.querySelectorAll('img')).map(img=>({alt:img.alt,ok:img.complete&&img.naturalWidth>0,w:img.naturalWidth,h:img.naturalHeight}));
-    const heading=document.querySelector('h1')?.textContent;
+    const heading=document.querySelector('h1,h2')?.textContent;
     return {w:box.width,h:box.height,images,heading,font:document.fonts.check('900 85px CairoLocal')};
   });
   if(errors.length || state.w!==1650 || state.h!==1200 || state.images.some(x=>!x.ok)|| !state.font || !state.heading){
