@@ -1292,7 +1292,7 @@
     "order": 11,
     "featured": false,
     "visible": true,
-    "status": "Interactive web showcase",
+    "status": "Engineering showcase",
     "source": "Private source",
     "engagement": "Independent project",
     "color": "#dbe4d2",
@@ -1337,13 +1337,7 @@
       ]
     ],
     "boundary": "A portfolio-only commerce demonstration. Prices, availability, shipping, products and orders are fictional. No payments, users, database or order transmission. The visual uses separately licensed illustrative catalog photos. The source repository is private.",
-    "screens": [
-      {
-        "src": "assets/rivaq/brand-art.svg",
-        "alt": "Original olive-green RIVAQ architectural logo artwork; a brand graphic, not a storefront screenshot.",
-        "caption": "RIVAQ original visual identity"
-      }
-    ],
+    "screens": [],
     "mediaKind": "Brand artwork",
     "mediaCaption": "Original brand artwork, not a captured app screen; the linked standalone case study uses illustrative catalog photographs.",
     "links": [
@@ -1361,6 +1355,7 @@
       "رواق",
       "رِواق"
     ],
-    "verifiedAt": "2026-10-16"
+    "verifiedAt": "2026-10-16",
+    "brandArt": "assets/rivaq/brand-art.svg"
   }
 ]
