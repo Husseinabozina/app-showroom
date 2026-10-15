@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RIVAQ • Mostaql portfolio artwork</title>
+<style>
+@font-face{font-family:CairoLocal;src:url(../../../node_modules/@fontsource/cairo/files/cairo-arabic-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:CairoLocal;src:url(../../../node_modules/@fontsource/cairo/files/cairo-arabic-800-normal.woff2) format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:CairoLocal;src:url(../../../node_modules/@fontsource/cairo/files/cairo-arabic-900-normal.woff2) format('woff2');font-weight:900;font-display:swap}
+:root{--forest:#10271f;--green:#1c3b30;--green2:#294e3b;--gold:#d2ae69;--cream:#f7f3e9;--muted:#a9baaa;--line:#d5ddca}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#061b14;color:white;font-family:CairoLocal,Cairo,"DejaVu Sans",sans-serif}
+.canvas{height:1200px;width:1650px;position:relative;overflow:hidden;isolation:isolate;background:#0d2a20}
+.canvas:before{content:"";position:absolute;inset:-230px;background:radial-gradient(ellipse at 20% 18%,#53765a72,transparent 35%),radial-gradient(ellipse at 85% 85%,#4a604044,transparent 44%),linear-gradient(135deg,#102c22,#081b16 74%);z-index:-3}
+.canvas:after{content:"";position:absolute;pointer-events:none;inset:0;border:14px solid #bba17617;z-index:40}
+.grain{position:absolute;inset:0;opacity:.09;pointer-events:none;background-image:radial-gradient(#ffffff66 .7px,transparent .9px);background-size:10px 10px;z-index:-1}
+.orb{position:absolute;border:1px solid #d9bc8369;border-radius:50%;pointer-events:none}
+.orb.a{width:830px;height:830px;left:-350px;top:290px}.orb.b{width:1250px;height:1250px;left:-560px;top:35px;opacity:.38}
+.arch{position:absolute;width:860px;height:1000px;border:2px solid #e9d59a2f;border-radius:440px 440px 0 0;left:200px;top:250px;pointer-events:none;transform:rotate(-8deg)}
+.num{font:700 18px "DejaVu Sans",sans-serif;letter-spacing:8px;color:#e7d2ac}
+.monogram{display:inline-flex;align-items:center;gap:19px;font-size:33px;font-weight:900;letter-spacing:-2px}
+.monogram svg{width:48px;height:52px}.monogram small{font:800 13px Arial,sans-serif;letter-spacing:6px;margin-right:3px;opacity:.75}
+.head{position:absolute;left:92px;right:92px;top:62px;display:flex;justify-content:space-between;align-items:center;z-index:20}
+.kicker{font-size:22px;color:var(--gold);letter-spacing:0}
+.fine{font-size:19px;color:#b8cabe;font-weight:700}
+.label{color:var(--gold);font:700 15px "DejaVu Sans",sans-serif;letter-spacing:4px}
+.big{font-size:84px;line-height:1.36;letter-spacing:-2px;font-weight:900;margin:0;max-width:1000px}
+.big span{color:#dfc28b}.desc{font-size:26px;line-height:1.8;color:#d2dcd1;max-width:890px;font-weight:700}
+.footer{position:absolute;bottom:57px;left:90px;right:90px;display:flex;justify-content:space-between;align-items:center;color:#d6d9c8;font-size:17px;border-top:1px solid #ffffff27;padding-top:18px;z-index:20}
+.footer .f-en{font:700 12px Arial,sans-serif;letter-spacing:5px;color:#c3b18f}
+.device{position:absolute;overflow:hidden;box-shadow:0 38px 75px #0008;border:1px solid #ffffff65}
+.desktop{border-radius:23px 23px 12px 12px;background:#f8f8f7;padding:14px;box-shadow:0 40px 90px #000a,0 0 0 7px #e2dbcb4a}
+.desktop .browser{height:40px;border-radius:9px 9px 0 0;background:#ebeae7;display:flex;align-items:center;gap:8px;padding:0 18px}
+.browser .dots{display:inline-flex;gap:7px}.dots i{height:11px;width:11px;background:#c5bfb3;border-radius:50%}.dots i:nth-child(1){background:#cd8073}.dots i:nth-child(2){background:#e2bc70}.dots i:nth-child(3){background:#85a88a}
+.browser .address{background:#f9f9f9;color:#8d938b;border-radius:5px;text-align:center;margin:0 auto;font:700 12px Arial,sans-serif;letter-spacing:1px;padding:5px 50px}
+.desktop .viewport{background:#f9f8f4;overflow:hidden}
+.desktop .viewport img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.phone{border-radius:56px;border:13px solid #172d25;background:#fbf9f4;padding:9px;box-shadow:0 0 0 4px #e3d7b9,0 38px 95px #000b}
+.phone:before{content:"";width:96px;height:18px;background:#182720;border-radius:0 0 20px 20px;position:absolute;left:50%;top:8px;transform:translateX(-50%);z-index:4}
+.phone:after{content:"";position:absolute;bottom:11px;left:50%;transform:translateX(-50%);width:92px;height:5px;border-radius:9px;background:#d2c9be;z-index:4}
+.phone .viewport{height:100%;width:100%;overflow:hidden;border-radius:37px}
+.phone .viewport img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.ribbon{position:absolute;background:var(--gold);color:#1c2e25;font-size:18px;font-weight:900;padding:15px 34px;box-shadow:0 10px 30px #0002;z-index:10}
+.detail{position:absolute;display:flex;flex-direction:column;gap:16px;color:#eee2c3;font-size:25px;font-weight:700}
+.detail strong{font-size:41px}
+.gold-line{height:3px;width:105px;background:#d5b46f}
+.counts{display:flex;gap:17px;align-items:center}
+.pill{border:1px solid #ccbb9277;color:#fbf6e9;border-radius:100px;padding:15px 24px;font-size:20px;font-weight:800;background:#ffffff10;white-space:nowrap}
+.badge{color:#d6c29b;font:800 14px Arial,sans-serif;letter-spacing:2px}
+.emphasis{background:#e5e2d6;color:#17362b;padding:11px 25px;border-radius:9px;font-size:18px;font-weight:900}
+.feature{border:1px solid #dbc3925c;background:#ffffff0f;border-radius:20px;padding:28px 30px}
+.feature b{font-size:30px}.feature p{font-size:18px;color:#c6d5c8;margin:8px 0 0;line-height:1.7}
+.circle{border-radius:50%;background:linear-gradient(135deg,#edcf96,#a47842);box-shadow:0 0 0 20px #ffffff07}
+.spot{width:390px;height:390px;border-radius:50%;background:#e4d1a936;filter:blur(70px);position:absolute}
+.light{background:#f5f1e8;color:#172c22}
+.light:before{background:radial-gradient(ellipse at 20% 20%,#ffffff 8%,transparent 62%),linear-gradient(120deg,#f3efe5,#e7e5d9)}
+.light .footer{color:#596c5d;border-color:#324b371b}.light .footer .f-en{color:#779078}
+.light .monogram{color:#214332}.light .label{color:#a77e4c}.light .desc{color:#647267}.light .orb{border-color:#8d9d7966}
+/* 01 main cover */
+.s1 .headline{position:absolute;top:181px;right:96px;z-index:10}
+.s1 .headline h1{font-size:106px;line-height:1.18;margin:0;font-weight:900}
+.s1 .headline p{font-size:29px;color:#d7e0d7;margin:14px 0 0}
+.s1 .desktop{left:72px;top:498px;width:1104px;height:576px;transform:rotate(-4deg);z-index:5}
+.s1 .desktop .viewport{height:502px}
+.s1 .phone{right:122px;top:421px;width:297px;height:644px;transform:rotate(8deg);z-index:7}
+.s1 .ribbon{left:-34px;top:268px;transform:rotate(-7deg)}
+.s1 .goldstamp{position:absolute;right:515px;top:501px;width:147px;height:147px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font:800 16px Arial,sans-serif;text-align:center;letter-spacing:4px;color:#f9e1b1;transform:rotate(-17deg);z-index:8;background:#123629}
+/* 02 full desktop */
+.s2 .intro{position:absolute;top:157px;right:97px;z-index:8}
+.s2 .intro .big{font-size:75px}.s2 .intro .desc{font-size:23px;margin-top:7px}
+.s2 .desktop{left:96px;top:450px;width:1460px;height:662px;z-index:3}
+.s2 .desktop .viewport{height:595px}.s2 .feature-chip{position:absolute;left:95px;top:209px;display:flex;gap:12px}
+/* 03 mobile */
+.s3 .intro{position:absolute;top:170px;right:110px;width:630px;z-index:8}
+.s3 .intro .big{font-size:74px}.s3 .intro .desc{font-size:27px}
+.s3 .phone.p1{left:138px;top:268px;width:336px;height:728px;transform:rotate(-9deg)}
+.s3 .phone.p2{left:452px;top:300px;width:328px;height:711px;transform:rotate(7deg)}
+.s3 .counts{position:absolute;right:105px;top:710px;flex-wrap:wrap;width:470px}
+.s3 .tiny{position:absolute;left:190px;top:1050px;color:#cdb887;font-size:18px}
+/* 04 shop */
+.s4 .intro{position:absolute;top:161px;right:99px;z-index:10}
+.s4 .intro .big{font-size:69px}.s4 .intro .desc{font-size:25px}
+.s4 .desktop{left:76px;top:455px;width:1270px;height:670px}
+.s4 .desktop .viewport{height:601px}
+.s4 .featurebox{position:absolute;right:81px;top:536px;z-index:11;width:330px}
+.s4 .featurebox .feature{margin-bottom:18px;box-shadow:0 18px 40px #0005}
+.s4 .featurebox .feature p{font-size:16px}
+/* 05 product */
+.s5 .intro{position:absolute;right:104px;top:180px;width:670px}
+.s5 .intro .big{font-size:73px}.s5 .intro .desc{font-size:25px}
+.s5 .phone{left:225px;top:230px;width:348px;height:753px;transform:rotate(-8deg)}
+.s5 .featuregroup{position:absolute;right:106px;top:653px;display:grid;grid-template-columns:repeat(2,220px);gap:15px}
+.s5 .feature{padding:24px}.s5 .feature b{font-size:22px}.s5 .feature p{font-size:15px}
+.s5 .arc{position:absolute;top:270px;left:180px;width:510px;height:700px;border:2px solid #d4b47860;border-radius:50%;transform:rotate(18deg)}
+/* 06 recap */
+.s6 .intro{position:absolute;top:157px;right:95px}.s6 .intro .big{font-size:73px}
+.s6 .stage{position:absolute;inset:415px 80px 120px 80px}
+.s6 .desktop{left:0;top:70px;width:990px;height:520px;transform:rotate(-2deg)}
+.s6 .desktop .viewport{height:453px}
+.s6 .phone{right:80px;top:-7px;width:272px;height:590px;transform:rotate(6deg)}
+.s6 .floating{position:absolute;right:240px;top:427px;background:var(--gold);color:#203326;padding:24px 29px;font-size:25px;font-weight:900;border-radius:4px;box-shadow:0 25px 50px #0007;transform:rotate(-6deg);z-index:10}
+.s6 .mini-features{position:absolute;bottom:120px;left:110px;display:flex;gap:14px;color:#e2dcc4;z-index:16}
+/* 07 identity */
+.s7 .intro{position:absolute;top:161px;right:100px}
+.s7 .intro .big{font-size:83px}
+.s7 .arcshape{position:absolute;top:427px;left:92px;height:660px;width:700px;border-radius:350px 350px 0 0;border:5px solid #d2b87b;background:#16382c;display:grid;place-items:center}
+.s7 .arcshape .inner{height:540px;width:560px;border-radius:290px 290px 0 0;border:2px solid #d2b87b64;display:flex;align-items:center;justify-content:center}
+.s7 .arcshape svg{width:250px;height:280px}
+.s7 .palette{position:absolute;right:100px;top:540px;width:610px;display:flex;gap:16px}
+.s7 .swatch{height:250px;flex:1;border:1px solid #bdac7959;border-radius:4px;display:flex;align-items:end;padding:18px;color:white;font:800 19px Arial,sans-serif}
+.s7 .palette-label{position:absolute;right:100px;top:824px;color:#5f7165;font-weight:800;font-size:25px}
+.s7 .desc2{position:absolute;right:100px;top:909px;color:#53675a;font-size:19px;font-weight:700}
+</style>
+</head>
+<body><div id="root"></div>
+<script>
+const src={home:"../screens/home-desktop.svg",shop:"../screens/shop-desktop.svg",mobile:"../screens/home-mobile.svg",product:"../screens/product-mobile.svg"};
+const mark='<svg viewBox="0 0 54 58" fill="none" aria-hidden="true"><path d="M7 50V28C7 14 16 6 27 6s20 8 20 22v22" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M18 50V29c0-7 5-11 10-11 6 0 11 4 11 10s-5 10-11 10H18m11 0 13 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="47" cy="8" r="5" fill="#D2AE69"/></svg>';
+const header='<header class="head"><div class="monogram">'+mark+'<span>رِواق <small>RIVAQ</small></span></div><span class="num">E-COMMERCE / 2026</span></header>';
+const footer='<footer class="footer"><span>رِواق — مشروع متجر إلكتروني عربي تجريبي</span><span class="f-en">DESIGN • DEVELOP • PRESENT</span></footer>';
+const base='<div class="grain"></div><div class="orb a"></div><div class="orb b"></div>';
+const desktop=(which,extra='')=>'<div class="device desktop '+extra+'"><div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="address">RIVAQ • STOREFRONT</div></div><div class="viewport"><img src="'+src[which]+'" alt="Actual RIVAQ screenshot"></div></div>';
+const phone=(which,extra='')=>'<div class="device phone '+extra+'"><div class="viewport"><img src="'+src[which]+'" alt="Actual RIVAQ mobile screenshot"></div></div>';
+const feature=(title,text)=>'<div class="feature"><b>'+title+'</b><p>'+text+'</p></div>';
+const slides={
+1:()=>'<section class="canvas s1">'+base+'<div class="arch"></div>'+header+
+'<div class="headline"><span class="label">ARABIC-FIRST COMMERCE EXPERIENCE</span><h1>رِواق<span style="color:#ddc690">.</span></h1><p>تجربة تسوّق عربية… بتفاصيل تصنع الفرق.</p></div>'+
+'<div class="ribbon">تصميم متجر إلكتروني متكامل بصريًا</div>'+desktop('home')+phone('mobile')+
+'<div class="goldstamp">RIVAQ<br>STORE<br>2026</div>'+footer+'</section>',
+2:()=>'<section class="canvas s2 light">'+base+header+
+'<div class="intro"><span class="label">01 — DESKTOP EXPERIENCE</span><h1 class="big">واجهة أولى <span>تشد الانتباه.</span></h1><p class="desc">تصميم عربي واضح، أقسام متنوعة، ومنتجات تُعرض بأناقة.</p></div>'+
+'<div class="feature-chip"><span class="emphasis">واجهة عربية RTL</span><span class="emphasis">تصميم متجاوب</span></div>'+desktop('home')+footer+'</section>',
+3:()=>'<section class="canvas s3">'+base+header+
+'<div class="intro"><span class="label">02 — MOBILE EXPERIENCE</span><h1 class="big">تجربة واحدة.<br><span>لكل شاشة.</span></h1><p class="desc">من الصفحة الرئيسية إلى تفاصيل المنتج، رحلة واضحة ومريحة على الهاتف.</p></div>'+
+phone('mobile','p1')+phone('product','p2')+
+'<div class="counts"><span class="pill">واجهة عربية بالكامل</span><span class="pill">عرض منتجات متجاوب</span><span class="pill">اختيار المقاس والإضافة للسلة</span></div>'+footer+'</section>',
+4:()=>'<section class="canvas s4 light">'+base+header+
+'<div class="intro"><span class="label">03 — PRODUCT DISCOVERY</span><h1 class="big">من التصفّح <span>إلى الاختيار.</span></h1><p class="desc">بحث، فلاتر، أقسام وترتيب… من دون تعقيد.</p></div>'+
+desktop('shop')+'<div class="featurebox">'+feature('بحث وفلترة','العثور على المنتجات وتصفيتها بسهولة.')+feature('32 منتجًا','كتالوج توضيحي موزّع على 8 أقسام.')+'</div>'+footer+'</section>',
+5:()=>'<section class="canvas s5">'+base+'<div class="arc"></div>'+header+
+'<div class="intro"><span class="label">04 — PRODUCT DETAILS</span><h1 class="big">التفاصيل<br><span>هي اللي تفرق.</span></h1><p class="desc">صفحة منتج منظّمة تخلي الخيارات والسعر والمخزون واضحة للمستخدم.</p></div>'+
+phone('product')+'<div class="featuregroup">'+feature('المقاسات','اختيار الحجم المتاح')+feature('السلة','إضافة وتعديل الكمية')+feature('المفضلة','حفظ المنتجات محليًا')+feature('العروض','خصم وشحن تجريبي')+'</div>'+footer+'</section>',
+6:()=>'<section class="canvas s6">'+base+header+
+'<div class="intro"><span class="label">05 — COMPLETE UI SHOWCASE</span><h1 class="big">واجهات متقنة.<br><span>تجربة متصلة.</span></h1></div>'+
+'<div class="stage">'+desktop('shop')+phone('mobile')+'</div>'+
+'<div class="floating">8 أقسام&nbsp; / &nbsp;32 منتجًا</div>'+
+'<div class="mini-features"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">RTL</span></div>'+footer+'</section>',
+7:()=>'<section class="canvas s7 light">'+base+header+
+'<div class="intro"><span class="label">06 — VISUAL IDENTITY</span><h1 class="big">هوية بسيطة.<br><span>حضور مختلف.</span></h1><p class="desc">من القوس المعماري إلى درجات الزيتوني والكريمي والذهب.</p></div>'+
+'<div class="arcshape"><div class="inner">'+mark+'</div></div>'+
+'<div class="palette"><div class="swatch" style="background:#203a32">#203A32</div><div class="swatch" style="background:#be8c46">#BE8C46</div><div class="swatch" style="background:#faf8f3;color:#183b2d">#FAF8F3</div></div>'+
+'<div class="palette-label">علامة لها شخصية واضحة.</div><div class="desc2">هوية مستقلة لا تتبع أي متجر أو علامة أخرى.</div>'+footer+'</section>'
+};
+const selected=Number(new URLSearchParams(location.search).get('slide')||'1');
+document.getElementById('root').innerHTML=(slides[selected]||slides[1])();
+</script>
+</body></html>
