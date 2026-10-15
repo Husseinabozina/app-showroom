@@ -1,5 +1,5 @@
 import { chromium } from '@playwright/test';
-import { access, mkdir, stat } from 'node:fs/promises';
+import { access, mkdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -27,6 +27,11 @@ try{
     throw new Error(images[i]+' failed visual preflight: '+JSON.stringify({errors,...state}));
   }
   await page.locator('.canvas').screenshot({path:path.join(output,images[i]+'.png'),type:'png',animations:'disabled',timeout:30000});
+  if(i===0||i===2||i===4){
+   const jpeg=await page.locator('.canvas').screenshot({type:'jpeg',quality:42,animations:'disabled'});
+   const svg='<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="1200" viewBox="0 0 1650 1200"><image href="data:image/jpeg;base64,'+jpeg.toString('base64')+'" width="1650" height="1200"/></svg>';
+   await writeFile(path.join(output,'PREVIEW_'+images[i]+'.svg'),svg);
+  }
   const info=await stat(path.join(output,images[i]+'.png'));
   if(info.size<50000 || info.size>25*1024*1024) throw new Error(images[i]+' invalid output size '+info.size);
   console.log('PASS '+images[i]+' / '+info.size+' bytes / '+state.images.length+' verified real captures');
