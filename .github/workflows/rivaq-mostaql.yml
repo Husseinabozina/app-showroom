@@ -1,0 +1,53 @@
+name: Render RIVAQ Mostaql artwork
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dist/rivaq/mostaql/template.html'
+      - 'dist/rivaq/mostaql/capture.mjs'
+      - '.github/workflows/rivaq-mostaql.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - name: Install reproducible browser renderer and Arabic font
+        run: npm install --no-save --package-lock=false @playwright/test@1.56.1 @fontsource/cairo@5.3.0
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Render seven pixel-accurate portfolio artworks
+        run: node dist/rivaq/mostaql/capture.mjs
+      - name: Package images and plain-text copy
+        run: |
+          python3 - <<'PY'
+          from zipfile import ZipFile, ZIP_DEFLATED
+          from pathlib import Path
+          folder=Path('dist/rivaq/mostaql')
+          files=sorted((folder/'images').glob('*.png'))
+          assert len(files)==7, len(files)
+          with ZipFile(folder/'RIVAQ_Mostaql_Portfolio_Assets.zip','w',ZIP_DEFLATED,compresslevel=8) as z:
+              for p in files: z.write(p,p.name)
+              for name in ('RIVAQ_Mostaql_Description.txt','UPLOAD_GUIDE_AR.txt'):
+                  p=folder/name;z.write(p,p.name)
+          print('PNG files:',len(files))
+          print('ZIP bytes:', (folder/'RIVAQ_Mostaql_Portfolio_Assets.zip').stat().st_size)
+          PY
+      - name: Publish rendered PNG assets and ZIP
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/rivaq/mostaql/images/*.png dist/rivaq/mostaql/RIVAQ_Mostaql_Portfolio_Assets.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: publish RIVAQ Mostaql portfolio graphics"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
