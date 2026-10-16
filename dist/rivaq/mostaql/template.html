@@ -116,7 +116,7 @@
 const src={home:"../screens/home-desktop.svg",shop:"../screens/shop-desktop.svg",mobile:"../screens/home-mobile.svg",product:"../screens/product-mobile.svg"};
 const mark='<svg viewBox="0 0 54 58" fill="none" aria-hidden="true"><path d="M7 50V28C7 14 16 6 27 6s20 8 20 22v22" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M18 50V29c0-7 5-11 10-11 6 0 11 4 11 10s-5 10-11 10H18m11 0 13 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="47" cy="8" r="5" fill="#D2AE69"/></svg>';
 const header='<header class="head"><div class="monogram">'+mark+'<span>رِواق <small>RIVAQ</small></span></div><span class="num">E-COMMERCE / 2026</span></header>';
-const footer='<footer class="footer"><span>رِواق — مشروع متجر إلكتروني عربي تجريبي</span><span class="f-en">DESIGN • DEVELOP • PRESENT</span></footer>';
+const footer='<footer class="footer"><span>رِواق — متجر إلكتروني عربي بتصميم عصري</span><span class="f-en">DESIGN • DEVELOP • PRESENT</span></footer>';
 const base='<div class="grain"></div><div class="orb a"></div><div class="orb b"></div>';
 const desktop=(which,extra='')=>'<div class="device desktop '+extra+'"><div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="address">RIVAQ • STOREFRONT</div></div><div class="viewport"><img s'+'rc="'+src[which]+'" alt="Actual RIVAQ screenshot"></div></div>';
 const phone=(which,extra='')=>'<div class="device phone '+extra+'"><div class="viewport"><img s'+'rc="'+src[which]+'" alt="Actual RIVAQ mobile screenshot"></div></div>';
@@ -127,25 +127,25 @@ const slides={
 '<div class="ribbon">تصميم متجر إلكتروني متكامل بصريًا</div>'+desktop('home')+phone('mobile')+
 '<div class="goldstamp">RIVAQ<br>STORE<br>2026</div>'+footer+'</section>',
 2:()=>'<section class="canvas s2 light">'+base+header+
-'<div class="intro"><span class="label">01 — DESKTOP EXPERIENCE</span><h2 class="big">واجهة أولى <span>تشد الانتباه.</span></h1><p class="desc">تصميم عربي واضح، أقسام متنوعة، ومنتجات تُعرض بأناقة.</p></div>'+
+'<div class="intro"><span class="label">01 — DESKTOP EXPERIENCE</span><h2 class="big">واجهة أولى <span>تشد الانتباه.</span></h2><p class="desc">تصميم عربي واضح، أقسام متنوعة، ومنتجات تُعرض بأناقة.</p></div>'+
 '<div class="feature-chip"><span class="emphasis">واجهة عربية RTL</span><span class="emphasis">تصميم متجاوب</span></div>'+desktop('home')+footer+'</section>',
 3:()=>'<section class="canvas s3">'+base+header+
-'<div class="intro"><span class="label">02 — MOBILE EXPERIENCE</span><h2 class="big">تجربة واحدة.<br><span>لكل شاشة.</span></h1><p class="desc">من الصفحة الرئيسية إلى تفاصيل المنتج، رحلة واضحة ومريحة على الهاتف.</p></div>'+
+'<div class="intro"><span class="label">02 — MOBILE EXPERIENCE</span><h2 class="big">تجربة واحدة.<br><span>لكل شاشة.</span></h2><p class="desc">من الصفحة الرئيسية إلى تفاصيل المنتج، رحلة واضحة ومريحة على الهاتف.</p></div>'+
 phone('mobile','p1')+phone('product','p2')+
 '<div class="counts"><span class="pill">واجهة عربية بالكامل</span><span class="pill">عرض منتجات متجاوب</span><span class="pill">اختيار المقاس والإضافة للسلة</span></div>'+footer+'</section>',
 4:()=>'<section class="canvas s4 light">'+base+header+
-'<div class="intro"><span class="label">03 — PRODUCT DISCOVERY</span><h2 class="big">من التصفّح <span>إلى الاختيار.</span></h1><p class="desc">بحث، فلاتر، أقسام وترتيب… من دون تعقيد.</p></div>'+
-desktop('shop')+'<div class="featurebox">'+feature('بحث وفلترة','العثور على المنتجات وتصفيتها بسهولة.')+feature('32 منتجًا','كتالوج توضيحي موزّع على 8 أقسام.')+'</div>'+footer+'</section>',
+'<div class="intro"><span class="label">03 — PRODUCT DISCOVERY</span><h2 class="big">من التصفّح <span>إلى الاختيار.</span></h2><p class="desc">بحث، فلاتر، أقسام وترتيب… من دون تعقيد.</p></div>'+
+desktop('shop')+'<div class="featurebox">'+feature('بحث وفلترة','العثور على المنتجات وتصفيتها بسهولة.')+feature('32 منتجًا','مجموعة منتجات موزّعة على 8 أقسام.')+'</div>'+footer+'</section>',
 5:()=>'<section class="canvas s5">'+base+'<div class="arc"></div>'+header+
-'<div class="intro"><span class="label">04 — PRODUCT DETAILS</span><h2 class="big">التفاصيل<br><span>هي اللي تفرق.</span></h1><p class="desc">صفحة منتج منظّمة تخلي الخيارات والسعر والمخزون واضحة للمستخدم.</p></div>'+
-phone('product')+'<div class="featuregroup">'+feature('المقاسات','اختيار الحجم المتاح')+feature('السلة','إضافة وتعديل الكمية')+feature('المفضلة','حفظ المنتجات محليًا')+feature('العروض','خصم وشحن تجريبي')+'</div>'+footer+'</section>',
+'<div class="intro"><span class="label">04 — PRODUCT DETAILS</span><h2 class="big">التفاصيل<br><span>هي اللي تفرق.</span></h2><p class="desc">صفحة منتج منظّمة تخلي الخيارات والسعر والمخزون واضحة للمستخدم.</p></div>'+
+phone('product')+'<div class="featuregroup">'+feature('المقاسات','اختيار الحجم المتاح')+feature('السلة','إضافة وتعديل الكمية')+feature('المفضلة','حفظ المنتجات محليًا')+feature('العروض','خصومات وحساب الشحن')+'</div>'+footer+'</section>',
 6:()=>'<section class="canvas s6">'+base+header+
-'<div class="intro"><span class="label">05 — COMPLETE UI SHOWCASE</span><h2 class="big">واجهات متقنة.<br><span>تجربة متصلة.</span></h1></div>'+
+'<div class="intro"><span class="label">05 — COMPLETE UI SHOWCASE</span><h2 class="big">واجهات متقنة.<br><span>تجربة متصلة.</span></h2></div>'+
 '<div class="stage">'+desktop('shop')+phone('mobile')+'</div>'+
 '<div class="floating">8 أقسام&nbsp; / &nbsp;32 منتجًا</div>'+
 '<div class="mini-features"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">RTL</span></div>'+footer+'</section>',
 7:()=>'<section class="canvas s7 light">'+base+header+
-'<div class="intro"><span class="label">06 — VISUAL IDENTITY</span><h2 class="big">هوية بسيطة.<br><span>حضور مختلف.</span></h1><p class="desc">من القوس المعماري إلى درجات الزيتوني والكريمي والذهب.</p></div>'+
+'<div class="intro"><span class="label">06 — VISUAL IDENTITY</span><h2 class="big">هوية بسيطة.<br><span>حضور مختلف.</span></h2><p class="desc">من القوس المعماري إلى درجات الزيتوني والكريمي والذهب.</p></div>'+
 '<div class="arcshape"><div class="inner">'+mark+'</div></div>'+
 '<div class="palette"><div class="swatch" style="background:#203a32">#203A32</div><div class="swatch" style="background:#be8c46">#BE8C46</div><div class="swatch" style="background:#faf8f3;color:#183b2d">#FAF8F3</div></div>'+
 '<div class="palette-label">علامة لها شخصية واضحة.</div><div class="desc2">هوية مستقلة لا تتبع أي متجر أو علامة أخرى.</div>'+footer+'</section>'
