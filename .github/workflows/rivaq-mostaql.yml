@@ -7,6 +7,9 @@ on:
       - 'dist/rivaq/mostaql/capture.mjs'
       - '.github/workflows/rivaq-mostaql.yml'
   workflow_dispatch:
+concurrency:
+  group: rivaq-mostaql-export
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
@@ -48,6 +51,6 @@ jobs:
           git add dist/rivaq/mostaql/images/*.png dist/rivaq/mostaql/images/PREVIEW_*.svg dist/rivaq/mostaql/RIVAQ_Mostaql_Portfolio_Assets.zip
           if ! git diff --cached --quiet; then
             git commit -m "assets: publish RIVAQ Mostaql portfolio graphics"
-            git pull --rebase origin main
+            git pull --rebase -X theirs origin main
             git push origin HEAD:main
           fi
