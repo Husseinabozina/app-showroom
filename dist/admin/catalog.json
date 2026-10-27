@@ -1,5 +1,113 @@
 [
   {
+    "slug": "miao",
+    "name": "miao · مياو",
+    "category": "Community",
+    "order": 0,
+    "featured": true,
+    "visible": true,
+    "status": "APK available",
+    "source": "Private source",
+    "engagement": "Independent project",
+    "color": "#b5e2db",
+    "ink": "#172b29",
+    "headline": "Little paws. Big stories.",
+    "summary": "An Arabic-first mobile experience for cat lovers in Qassim, connecting listings, favorites, conversations and missing-cat reports through a warm, playful identity.",
+    "teaser": "A little place for cat people. A little closer to home.",
+    "role": "Product design & Flutter development",
+    "roleDetail": "Designed and developed miao: its Arabic product experience, Vortex identity, Flutter mobile journeys, shared components and administration tools.",
+    "contributions": [
+      "Created a mint-and-charcoal visual language with a distinctive Vortex wordmark, rounded cards and considered motion.",
+      "Built listing discovery, search, filters, favorites and photo-led publishing.",
+      "Connected missing-cat reports with a map-based browsing experience.",
+      "Implemented conversations, order follow-up and shared administration tools."
+    ],
+    "flows": [
+      [
+        "Find a companion",
+        "Explore the collection, narrow by breed and city, and save the listings that catch your eye."
+      ],
+      [
+        "Share a story",
+        "Add photographs and details, review a listing and continue the conversation."
+      ],
+      [
+        "Help them find home",
+        "Browse local missing-cat reports and see where a small sighting could make a difference."
+      ]
+    ],
+    "engineering": [
+      [
+        "Arabic at the center",
+        "Right-to-left layouts, local typography and clear directional navigation give the product its natural reading rhythm."
+      ],
+      [
+        "One shared identity",
+        "The approved wordmark and spiral geometry carry across the app, icons, launch sequence and reusable components."
+      ],
+      [
+        "Connected product thinking",
+        "Discovery, publishing, messages and follow-up share a consistent visual and navigation language."
+      ]
+    ],
+    "boundary": "Original product identity and implementation by Hussein Abozina. The gallery contains owner-supplied captures of the Android app.",
+    "mediaCaption": "Actual Android app captures supplied by the owner",
+    "screens": [
+      {
+        "src": "assets/miao/home.jpg",
+        "alt": "miao Android — Your next companion",
+        "caption": "Your next companion"
+      },
+      {
+        "src": "assets/miao/welcome.jpg",
+        "alt": "miao Android — A warm welcome",
+        "caption": "A warm welcome"
+      },
+      {
+        "src": "assets/miao/map.jpg",
+        "alt": "miao Android — A way back home",
+        "caption": "A way back home"
+      },
+      {
+        "src": "assets/miao/listing.jpg",
+        "alt": "miao Android — Tell their story",
+        "caption": "Tell their story"
+      },
+      {
+        "src": "assets/miao/order.jpg",
+        "alt": "miao Android — Every step, clear",
+        "caption": "Every step, clear"
+      }
+    ],
+    "links": [
+      {
+        "label": "Explore miao",
+        "url": "https://husseinabozina.github.io/miao-view/",
+        "kind": "proof"
+      },
+      {
+        "label": "Download Android",
+        "url": "https://github.com/Husseinabozina/miao-view/releases/download/miao-portfolio-2026-10-26/miao-android.apk",
+        "kind": "apk"
+      },
+      {
+        "label": "Presentation repository",
+        "url": "https://github.com/Husseinabozina/miao-view",
+        "kind": "presentation"
+      }
+    ],
+    "evidence": [
+      "https://github.com/Husseinabozina/miao-view",
+      "https://husseinabozina.github.io/miao-view/"
+    ],
+    "aliases": [
+      "miao-qassim",
+      "meow",
+      "مياو"
+    ],
+    "verifiedAt": "2026-10-26"
+  },
+  {
     "slug": "nova",
     "name": "NOVA",
     "category": "Commerce",
